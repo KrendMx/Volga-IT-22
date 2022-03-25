@@ -14,7 +14,7 @@ class Info {
     slide10: 0,
   };
 
-  initialSlide = 0;
+  initialSlide = 100;
 
   constructor() {
     makeAutoObservable(this);

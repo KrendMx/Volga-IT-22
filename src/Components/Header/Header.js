@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Headers from "./Header.Styles";
 import logo from "../../Image/Logo.png";
-import { LinearProgress } from "@mui/material";
+import { LinearProgress, linearProgressClasses } from "@mui/material";
 import { observer } from "mobx-react-lite";
+import {styled} from "@mui/material";
 import Information from "../../information";
 const Header = observer(() => {
   return (
@@ -86,15 +87,27 @@ const Header = observer(() => {
         </div>
       </Headers>
       {Information.initialSlide !== 0 ? (
-        <LinearProgress
+        <BorderLinearProgress
           value={Information.initialSlide}
           valuemax={100}
           variant={"determinate"}
-          style={{ height: "0.6rem", backgroundColor: "white" }}
+          style={{ height: "0.6rem", backgroundColor: "lightgrey" }}
         />
       ) : null}
     </div>
   );
 });
+
+const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+  height: 10,
+  borderRadius: 5,
+  [`&.${linearProgressClasses.colorPrimary}`]: {
+    borderRadius: "0 0 0 0",
+  },
+  [`& .${linearProgressClasses.bar}`]: {
+    borderRadius: 10,
+    backgroundImage: "linear-gradient(to right, #3797FA, #45C9FF)"
+  }
+}));
 
 export default Header;
