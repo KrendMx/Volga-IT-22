@@ -1,20 +1,27 @@
 import React, { useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
+import "swiper/swiper-bundle.css";
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper";
+import Header from "./Components/Header/Header";
+import FirsSlide from "./Components/FirstSlide/FirsSlide";
 
 const App = ({ url }) => {
+  const [slideNumber, setSlideNumber] = useState(0);
+
   return (
     <div>
+      <Header slideNuber={slideNumber} />
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={0}
+        initialSlide={0}
         slidesPerView={1}
         navigation={false}
         allowTouchMove={false}
-        style={{ width: "40rem", textAlign: "center" }}
       >
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <FirsSlide />
+        </SwiperSlide>
         {/*Начальный слайд*/}
         <SwiperSlide></SwiperSlide>
         {/*1. Выбор пола*/}

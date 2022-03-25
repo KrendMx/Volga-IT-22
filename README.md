@@ -17,3 +17,5 @@
 ### `https://volga-it.org/wp-content/plugins/wp-olymp/files/57ce42844e6c5878f3b325e92ac86188.pdf`
 
 Ссылка на задание отборочного этапа
+
+Проверка работоспособности гита
