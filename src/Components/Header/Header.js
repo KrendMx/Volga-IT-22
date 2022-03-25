@@ -11,7 +11,7 @@ const Header = (props) => {
         {!slideNumber ? (
           <img src={logo} />
         ) : (
-          <button >
+          <button>
             <svg
               width="12"
               height="20"
@@ -30,7 +30,7 @@ const Header = (props) => {
           </button>
         )}
         {slideNumber ? (
-          <img src={logo}  alt={"Логотип"}/>
+          <img src={logo} alt={"Логотип"} />
         ) : (
           <button>
             <svg
@@ -51,13 +51,7 @@ const Header = (props) => {
           </button>
         )}
       </Headers>
-      <div style={{width:"90%",padding:"0em 4%",margin:"auto"}}>
-        <LinearProgress
-          sx={{height:"0.6rem",backgroundColor:"#D8D8D8",color:"red",borderRadius: "0,0,1,1",left:-3,width:"101.5%"}}
-          variant="determinate"
-          value={100}
-        />
-      </div>
+    <LinearProgress value={10} variant={"determinate"} style={{height:"0.6rem", backgroundColor:"white"}} />
     </div>
   );
 };

@@ -2,12 +2,11 @@ import styled from "styled-components";
 
 const Slides = styled.div`
   width: 100%;
-  max-width: 25rem;
   margin: auto;
   position: relative;
   background: linear-gradient(180deg, #E8F0F2 0%, #E8F0F2 100%);
   text-align: center;
-  padding: 0.1em 4% 10rem ;
+  padding:1rem 0em 10rem;
 
   & button {
     background: linear-gradient(270deg, #45C7FA 0%, #2196F3 100%);
@@ -57,12 +56,10 @@ const Slides = styled.div`
 const Headers = styled.div`
   display: flex;
   width: 100%;
-  max-width: 25rem;
   justify-content: space-between;
-  position: relative;
   align-content: center;
-  padding: 4%;
-  margin: auto;
+  padding: 4% 0em;
+  margin: 0 auto;
   background: white;
    & img {
      width:140px;
