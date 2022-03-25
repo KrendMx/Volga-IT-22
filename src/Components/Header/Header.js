@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import {Header} from "../../styled"
-const Headers = (props) => {
+import {Headers} from "../../styled"
+const Header = (props) => {
     return (
-        <Header>
+        <Headers>
             
-        </Header>
+        </Headers>
     );
 };
 
-export default Headers;
+export default Header;

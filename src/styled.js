@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-const Slide = styled.div`
+const Slides = styled.div`
   width: 40rem;
 `;
 
-const Header = styled.div``;
+const Headers = styled.div``;
 
-export { slide, Header };
+export { Slides, Headers };
