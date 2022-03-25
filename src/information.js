@@ -24,29 +24,17 @@ class Info {
     this.userInfo[ctx] = value;
   }
 
-  nextSlide() {
-    this.initialSlide += 1;
+  nextSlide() {}
+
+  prevSlide() {}
+
+  changeSlide(func1, func2, func3) {
+    this.prevSlide = func1;
+    this.nextSlide = func2;
+    this.startSlide = func3;
   }
 
-  prevSlide() {
-    this.initialSlide -= 1;
-  }
-
-  startSlide() {
-    this.initialSlide = 0;
-    this.userInfo = {
-      slide1: 0,
-      slide2: 0,
-      slide3: 0,
-      slide4: 0,
-      slide5: 0,
-      slide6: 0,
-      slide7: 0,
-      slide8: 0,
-      slide9: 0,
-      slide10: 0,
-    };
-  }
+  startSlide() {}
 
   generateLink() {
     let link;

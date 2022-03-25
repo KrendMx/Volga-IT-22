@@ -4,18 +4,20 @@ import "swiper/swiper-bundle.css";
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper";
 import Header from "./Components/Header/Header";
 import FirsSlide from "./Components/FirstSlide/FirsSlide";
+import Information from "./information";
+import { observer } from "mobx-react-lite";
+import SecondSlide from "./Components/SecondSlide/SecondSlide";
 
-const App = ({ url }) => {
-  const [slideNumber, setSlideNumber] = useState(0);
+const App = observer(({ url }) => {
 
   return (
-    <div>
-      <Header slideNuber={slideNumber} />
+    <div style={{height:"700px",overflowY:"hidden"}}>
+      <Header slideNuber={Information.initialSlide} />
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={0}
-        initialSlide={0}
         slidesPerView={1}
+        initialSlide={0}
         navigation={false}
         allowTouchMove={false}
       >
@@ -23,7 +25,9 @@ const App = ({ url }) => {
           <FirsSlide />
         </SwiperSlide>
         {/*Начальный слайд*/}
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <SecondSlide/>
+        </SwiperSlide>
         {/*1. Выбор пола*/}
         <SwiperSlide></SwiperSlide>
         {/*2. Выбор моделей*/}
@@ -50,6 +54,6 @@ const App = ({ url }) => {
       </Swiper>
     </div>
   );
-};
+})
 
 export default App;
