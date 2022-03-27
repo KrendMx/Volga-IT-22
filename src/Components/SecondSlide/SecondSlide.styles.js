@@ -17,7 +17,7 @@ const Slides = styled.div`
     cursor: pointer;
     background-color: white;
     border-radius: 1rem;
-    margin: 5%;
+    margin: 3%;
     transition: all 0.4s;
 
     & img {
@@ -45,7 +45,8 @@ const Slides = styled.div`
   & h3 {
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
-    font-size: 16;
+    margin-top: 8rem;
+    font-size: 16px;
     cursor: pointer;
     color: #3a4850;
     text-decoration: underline;

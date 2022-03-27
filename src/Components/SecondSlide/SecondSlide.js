@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { observer } from "mobx-react-lite";
-import Information from "../../information";
+import Information from "../../Store";
 import Slide from "./SecondSlide.styles";
 import mens from "../../Image/men's gender.png";
 import womens from "../../Image/women's gender.png";
@@ -13,7 +13,7 @@ const SecondSlide = observer(() => {
         <div
           onClick={() => {
             Information.changeLabel("slide1", 5);
-            Information.nextSlide();
+            Information.toNextSlide();
           }}
         >
           <img src={womens} alt={"Иконка женщины"} />
@@ -22,7 +22,7 @@ const SecondSlide = observer(() => {
         <div
           onClick={() => {
             Information.changeLabel("slide1", 4);
-            Information.nextSlide();
+            Information.toNextSlide();
           }}
         >
           <img src={mens} alt={"Иконка мужчины"} />
@@ -30,7 +30,7 @@ const SecondSlide = observer(() => {
         </div>
         <h3
           onClick={() => {
-            Information.nextSlide();
+            Information.toNextSlide();
           }}
         >
           I'd like to see both

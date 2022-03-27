@@ -1,24 +1,26 @@
 import React, { useState, useEffect } from "react";
+
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
 import "swiper/swiper-bundle.css";
-import { A11y, Navigation, Pagination, Scrollbar } from "swiper";
+
 import Header from "./Components/Header/Header";
 import FirsSlide from "./Components/FirstSlide/FirsSlide";
-import Information from "./information";
-import { observer } from "mobx-react-lite";
 import SecondSlide from "./Components/SecondSlide/SecondSlide";
+import ThirdSlide from "./Components/ThirdSlide/ThirdSlide";
+import BetweenSLide from "./Components/BetweenSlide/BetweenSLide";
+
+import Information from "./Store";
+import { observer } from "mobx-react-lite";
+import FourthSlide from "./Components/FourthSlide/FourthSlide";
 
 const App = observer(({ url }) => {
-
   return (
-    <div style={{height:"700px",overflowY:"hidden"}}>
+    <div style={{ height: "700px", overflowY: "hidden" }}>
       <Header slideNuber={Information.initialSlide} />
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={0}
         slidesPerView={1}
         initialSlide={0}
-        navigation={false}
         allowTouchMove={false}
       >
         <SwiperSlide>
@@ -26,14 +28,20 @@ const App = observer(({ url }) => {
         </SwiperSlide>
         {/*Начальный слайд*/}
         <SwiperSlide>
-          <SecondSlide/>
+          <SecondSlide />
         </SwiperSlide>
         {/*1. Выбор пола*/}
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <ThirdSlide />
+        </SwiperSlide>
         {/*2. Выбор моделей*/}
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <BetweenSLide title={"Let's get to know you!"} />
+        </SwiperSlide>
         {/*Страница между слайдом 2-3*/}
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <FourthSlide />
+        </SwiperSlide>
         {/*3. Выбор типа очков*/}
         <SwiperSlide></SwiperSlide>
         {/*4. Выбор размера душки у очков*/}
@@ -54,6 +62,6 @@ const App = observer(({ url }) => {
       </Swiper>
     </div>
   );
-})
+});
 
 export default App;

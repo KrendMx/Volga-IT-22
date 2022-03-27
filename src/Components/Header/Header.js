@@ -3,8 +3,8 @@ import Headers from "./Header.Styles";
 import logo from "../../Image/Logo.png";
 import { LinearProgress, linearProgressClasses } from "@mui/material";
 import { observer } from "mobx-react-lite";
-import {styled} from "@mui/material";
-import Information from "../../information";
+import { styled } from "@mui/material";
+import Information from "../../Store";
 const Header = observer(() => {
   return (
     <div>
@@ -13,7 +13,13 @@ const Header = observer(() => {
           {!Information.initialSlide ? (
             <img src={logo} />
           ) : (
-            <button onClick={()=>{Information.prevSlide()}}>
+            <button
+              onClick={() => {
+                Information.swiperSlides[3].className !== "swiper-slide swiper-slide-prev"
+                  ? Information.toPrevSlide()
+                  : Information.toPrevBannerSlide();
+              }}
+            >
               <svg
                 width="15"
                 height="20"
@@ -32,12 +38,18 @@ const Header = observer(() => {
             </button>
           )}
           {Information.initialSlide ? (
-            <p>{Information.initialSlide / 10}/10</p>
+            <p
+              onClick={() => {
+                console.log(Information.swiperSlides[3].className);
+              }}
+            >
+              {Information.initialSlide / 10}/10
+            </p>
           ) : null}
           {Information.initialSlide ? (
             <button
               onClick={() => {
-                Information.startSlide();
+                Information.toStartSlide();
               }}
             >
               <svg
@@ -64,7 +76,7 @@ const Header = observer(() => {
           ) : (
             <button
               onClick={() => {
-                Information.nextSlide();
+                Information.toNextSlide();
               }}
             >
               <svg
@@ -106,8 +118,8 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   },
   [`& .${linearProgressClasses.bar}`]: {
     borderRadius: 10,
-    backgroundImage: "linear-gradient(to right, #3797FA, #45C9FF)"
-  }
+    backgroundImage: "linear-gradient(to right, #3797FA, #45C9FF)",
+  },
 }));
 
 export default Header;

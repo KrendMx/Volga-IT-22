@@ -3,7 +3,7 @@ import Slides from "./FirstSlide.Styles";
 import img from "../../Image/MainImage.png";
 import { useSwiper } from "swiper/react/context.js";
 import { observer } from "mobx-react-lite";
-import Information from "../../information";
+import Information from "../../Store";
 
 const FirsSlide = observer(() => {
   const swiper = useSwiper();
@@ -12,28 +12,15 @@ const FirsSlide = observer(() => {
     Information.changeSlide(
       () => {
         swiper.slidePrev();
-        Information.initialSlide -= 10;
       },
       () => {
         swiper.slideNext();
-        Information.initialSlide += 10;
-      },()=>{
+      },
+      () => {
         swiper.slideTo(0);
-        Information.initialSlide = 0;
-        Information.userInfo = {
-          slide1: 0,
-          slide2: 0,
-          slide3: 0,
-          slide4: 0,
-          slide5: 0,
-          slide6: 0,
-          slide7: 0,
-          slide8: 0,
-          slide9: 0,
-          slide10: 0,
-        };
       }
     );
+    Information.swiperSlides = swiper.slides;
   }, []);
 
   return (
@@ -46,7 +33,7 @@ const FirsSlide = observer(() => {
       </h2>
       <button
         onClick={() => {
-          Information.nextSlide();
+          Information.toNextSlide();
         }}
       >
         Start now
