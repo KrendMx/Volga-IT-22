@@ -1,19 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
 import "swiper/swiper-bundle.css";
 
-import Header from "./Components/Header/Header";
-import FirsSlide from "./Components/FirstSlide/FirsSlide";
-import SecondSlide from "./Components/SecondSlide/SecondSlide";
-import ThirdSlide from "./Components/ThirdSlide/ThirdSlide";
-import BetweenSLide from "./Components/BetweenSlide/BetweenSLide";
-
-import Information from "./Store";
+import Information from "./Store/Store";
 import { observer } from "mobx-react-lite";
+
 import FourthSlide from "./Components/FourthSlide/FourthSlide";
 import FifthSlide from "./Components/FifthSlide/FifthSlide";
 import FifthSlideP2 from "./Components/FifthSLideP2/FifthSlideP2";
+import SixthSlide from "./Components/SixthSlide/SixthSlide";
+import Header from "./Components/Header/Header";
+import FirstSlide from "./Components/FirstSlide/FirstSlide";
+import SecondSlide from "./Components/SecondSlide/SecondSlide";
+import ThirdSlide from "./Components/ThirdSlide/ThirdSlide";
+import BetweenSLide from "./Components/BetweenSlide/BetweenSLide";
 
 const App = observer(({ url }) => {
   return (
@@ -26,7 +27,7 @@ const App = observer(({ url }) => {
         allowTouchMove={false}
       >
         <SwiperSlide>
-          <FirsSlide />
+          <FirstSlide />
         </SwiperSlide>
         {/*Начальный слайд*/}
         <SwiperSlide>
@@ -57,7 +58,9 @@ const App = observer(({ url }) => {
           <FifthSlideP2 />
         </SwiperSlide>
         {/*6. Выбор формы лица*/}
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <SixthSlide />
+        </SwiperSlide>
         {/*7. Выбор черт лица*/}
         <SwiperSlide></SwiperSlide>
         {/*8. Выбор типа очков*/}

@@ -1,33 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { observer } from "mobx-react-lite";
-import Information from "../../Store";
-import Slide from "./SecondSlide.styles";
+import Information from "../../Store/Store";
 import mens from "../../Image/men's gender.png";
 import womens from "../../Image/women's gender.png";
+import { ContainerChoose, TextUnderImage } from "../../Styles";
 
 const SecondSlide = observer(() => {
   return (
     <div>
-      <Slide>
+      <ContainerChoose>
         <h2>You are looking for</h2>
-        <div
+        <TextUnderImage
           onClick={() => {
-            Information.changeLabel("gender", 5);
+            Information.changeLabel("gender", "5");
             Information.toNextSlide();
           }}
         >
           <img src={womens} alt={"Иконка женщины"} />
           <p>Women's Styles</p>
-        </div>
-        <div
+        </TextUnderImage>
+        <TextUnderImage
           onClick={() => {
-            Information.changeLabel("gender", 4);
+            Information.changeLabel("gender", "4");
             Information.toNextSlide();
           }}
         >
           <img src={mens} alt={"Иконка мужчины"} />
           <p>Men's Style</p>
-        </div>
+        </TextUnderImage>
         <h3
           onClick={() => {
             Information.toNextSlide();
@@ -35,7 +35,7 @@ const SecondSlide = observer(() => {
         >
           I'd like to see both
         </h3>
-      </Slide>
+      </ContainerChoose>
     </div>
   );
 });

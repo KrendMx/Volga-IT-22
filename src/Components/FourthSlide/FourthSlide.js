@@ -1,32 +1,33 @@
 import React, { useState } from "react";
 import Slides from "../SecondSlide/SecondSlide.styles";
+import { ContainerChoose, TextUnderImage } from "../../Styles";
 import { observer } from "mobx-react-lite";
-import Store from "../../Store";
+import Store from "../../Store/Store";
 
 const FourthSLide = observer(() => {
   const [isAgree, setIsAgree] = useState(false);
 
   return (
-    <div>
+    <>
       {!isAgree ? (
-        <Slides>
+        <ContainerChoose>
           <h2>Do you need vision correction?</h2>
-          <div
+          <TextUnderImage
             style={{ padding: "3em" }}
             onClick={() => {
               setIsAgree(true);
             }}
           >
             <p>Yes</p>
-          </div>
-          <div
+          </TextUnderImage>
+          <TextUnderImage
             onClick={() => {
               Store.toNextSlide();
             }}
             style={{ padding: "3em" }}
           >
             <p>No</p>
-          </div>
+          </TextUnderImage>
           <h3
             onClick={() => {
               Store.toNextSlide();
@@ -34,13 +35,13 @@ const FourthSLide = observer(() => {
           >
             Skip
           </h3>
-        </Slides>
+        </ContainerChoose>
       ) : (
-        <Slides>
+        <ContainerChoose>
           <h2>What do you need your glasses for?</h2>
-          <div
+          <TextUnderImage
             onClick={() => {
-              Store.changeLabel("lenstype", 6);
+              Store.changeLabel("lenstype", "6");
               Store.toNextSlide();
               setTimeout(() => {
                 setIsAgree(false);
@@ -48,10 +49,10 @@ const FourthSLide = observer(() => {
             }}
           >
             <p>Near Vision</p>
-          </div>
-          <div
+          </TextUnderImage>
+          <TextUnderImage
             onClick={() => {
-              Store.changeLabel("lenstype", 6);
+              Store.changeLabel("lenstype", "6");
               Store.toNextSlide();
               setTimeout(() => {
                 setIsAgree(false);
@@ -59,10 +60,10 @@ const FourthSLide = observer(() => {
             }}
           >
             <p>Distance Vision</p>
-          </div>
-          <div
+          </TextUnderImage>
+          <TextUnderImage
             onClick={() => {
-              Store.changeLabel("lenstype", 7);
+              Store.changeLabel("lenstype", "7");
               Store.toNextSlide();
               setTimeout(() => {
                 setIsAgree(false);
@@ -70,7 +71,7 @@ const FourthSLide = observer(() => {
             }}
           >
             <p>Multifocal / Progressive</p>
-          </div>
+          </TextUnderImage>
           <h3
             onClick={() => {
               Store.toNextSlide();
@@ -81,9 +82,9 @@ const FourthSLide = observer(() => {
           >
             Skip
           </h3>
-        </Slides>
+        </ContainerChoose>
       )}
-    </div>
+    </>
   );
 });
 

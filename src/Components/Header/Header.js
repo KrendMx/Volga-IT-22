@@ -1,28 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Headers from "./Header.Styles";
 import logo from "../../Image/Logo.png";
 import { LinearProgress, linearProgressClasses } from "@mui/material";
 import { observer } from "mobx-react-lite";
 import { styled } from "@mui/material";
-import Information from "../../Store";
+import Information from "../../Store/Store";
 const Header = observer(() => {
   return (
     <div>
       <Headers>
         <div>
           {!Information.initialSlide ? (
-            <img src={logo} />
+            <img src={logo} alt={"logo"}/>
           ) : (
             <button
               onClick={() => {
-                console.log(Information.swiperSlides[6].className);
                 if (
                   Information.swiperSlides[3].className ===
-                    "swiper-slide swiper-slide-prev" ||
-                  Information.swiperSlides[6].className ===
-                    "swiper-slide swiper-slide-prev"
+                  "swiper-slide swiper-slide-prev"
                 ) {
                   Information.toPrevBannerSlide();
+                } else if (
+                  Information.swiperSlides[6].className ===
+                  "swiper-slide swiper-slide-prev"
+                ) {
+                  Information.toPrevBannerSlide();
+                  Information.initialSlide +=10
                 } else {
                   Information.toPrevSlide();
                 }

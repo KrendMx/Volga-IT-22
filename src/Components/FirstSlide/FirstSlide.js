@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import Slides from "./FirstSlide.Styles";
 import img from "../../Image/MainImage.png";
 import { useSwiper } from "swiper/react/context.js";
 import { observer } from "mobx-react-lite";
-import Information from "../../Store";
+import Information from "../../Store/Store";
+import { ContainerMain } from "../../Styles";
 
-const FirsSlide = observer(() => {
+const FirstSlide = observer(() => {
   const swiper = useSwiper();
 
   useEffect(() => {
@@ -24,9 +24,9 @@ const FirsSlide = observer(() => {
   }, []);
 
   return (
-    <Slides>
+    <ContainerMain>
       <img src={img} alt="glasses" />
-      <h1>Let’s find your perfect pair!</h1>
+      <h1>Let's find your perfect pair!</h1>
       <h2>
         Take the quiz to easily discover your perfect fit from thousands of
         styles
@@ -38,8 +38,8 @@ const FirsSlide = observer(() => {
       >
         Start now
       </button>
-    </Slides>
+    </ContainerMain>
   );
 });
 
-export default FirsSlide;
+export default FirstSlide;

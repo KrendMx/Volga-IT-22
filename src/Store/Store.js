@@ -1,4 +1,4 @@
-import { makeAutoObservable, makeObservable } from "mobx";
+import { makeAutoObservable } from "mobx";
 
 class Info {
   userInfo = {
@@ -51,9 +51,9 @@ class Info {
     this.initialSlide += 10;
   }
 
-  toPrevSlide() {
+  toPrevSlide(val) {
     this.swiperPrevSlide();
-    this.initialSlide -= 10;
+    this.initialSlide -= 10
   }
 
   toStartSlide() {
