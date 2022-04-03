@@ -15,10 +15,17 @@ import FirstSlide from "./Components/FirstSlide/FirstSlide";
 import SecondSlide from "./Components/SecondSlide/SecondSlide";
 import ThirdSlide from "./Components/ThirdSlide/ThirdSlide";
 import BetweenSLide from "./Components/BetweenSlide/BetweenSLide";
+import { AppContainer } from "./Styles";
 
 const App = observer(({ url }) => {
   return (
-    <div style={{ height: "700px", overflowY: "hidden" }}>
+    <AppContainer>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&family=Roboto:wght@700&display=swap"
+        rel="stylesheet"
+      />
       <Header slideNuber={Information.initialSlide} />
       <Swiper
         spaceBetween={0}
@@ -71,7 +78,7 @@ const App = observer(({ url }) => {
         <SwiperSlide></SwiperSlide>
         {/*11. Заключительный этап. Выведение в консоль итоговой ссылки*/}
       </Swiper>
-    </div>
+    </AppContainer>
   );
 });
 

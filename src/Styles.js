@@ -18,7 +18,7 @@ const ContainerChoose = styled.div`
 
   & h2 {
     width: 60%;
-    font-size:20px;
+    font-size: 20px;
     margin: 1rem auto;
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
@@ -141,12 +141,12 @@ const TextImageAndLineBetween = styled.div`
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
     color: #425a60;
-    padding:3%;
-    border-left: 2px solid #DEDEDE;
+    padding: 3%;
+    border-left: 2px solid #dedede;
   }
   & img {
     width: 15%;
-    margin-right:3%;
+    margin-right: 3%;
   }
 `;
 
@@ -155,7 +155,7 @@ const Headers = styled.div`
   padding: 4% 0;
   margin: 0 auto;
   background: white;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 500;
   & img {
     width: 200px;
@@ -173,7 +173,7 @@ const Headers = styled.div`
     padding: 1%;
     border: 0;
     background: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     cursor: pointer;
     transition: all 0.2s;
     border-radius: 10%;
@@ -183,11 +183,64 @@ const Headers = styled.div`
   }
 `;
 
+const AppContainer = styled.div`
+  width: 25rem;
+  position: relative;
+  margin: 0;
+  font-family: sans-serif;
+  height: 45em;
+  overflow-y: hidden;
+`;
+
+const Animation = styled.div`
+  @-webkit-keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+      -webkit-transform: scale3d(1.5, 1.5, 1.5);
+      transform: scale3d(1.5, 1.5, 1.5);
+    }
+
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  @keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+      -webkit-transform: scale3d(1.5, 1.5, 1.5);
+      transform: scale3d(1.5, 1.5, 1.5);
+    }
+
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+`;
+
 export {
+  AppContainer,
+  Animation,
   ContainerChoose,
   ContainerMain,
   TextUnderImage,
   TextAndImage,
   TextImageAndLineBetween,
-  Headers
+  Headers,
 };

@@ -1,14 +1,11 @@
 import React from "react";
-import { ContainerMain } from "../../Styles";
-
-import "animate.css";
+import { Animation, ContainerMain } from "../../Styles";
 
 const BetweenSlide = (props) => {
   return (
     <ContainerMain>
-      <div
-        className={"animate__animated animate__bounce animate__infinite"}
-        style={{ paddingTop: "15%", animationDuration: "1.5s" }}
+      <Animation
+        style={{ paddingTop: "15%"}}
       >
         <svg
           width="182"
@@ -131,7 +128,7 @@ const BetweenSlide = (props) => {
             </filter>
           </defs>
         </svg>
-      </div>
+      </Animation>
       <h1>{props.title}</h1>
     </ContainerMain>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import Headers from "./Header.Styles";
+import {Headers} from "../../Styles";
 import { LinearProgress, linearProgressClasses } from "@mui/material";
 import { observer } from "mobx-react-lite";
 import { styled } from "@mui/material";
