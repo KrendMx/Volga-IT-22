@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-
-import "./Fourth.css";
+import React, { useState } from "react";
 import Slides from "../SecondSlide/SecondSlide.styles";
 import { observer } from "mobx-react-lite";
 import Store from "../../Store";
@@ -42,7 +40,7 @@ const FourthSLide = observer(() => {
           <h2>What do you need your glasses for?</h2>
           <div
             onClick={() => {
-              Store.changeLabel("slide4", 6);
+              Store.changeLabel("lenstype", 6);
               Store.toNextSlide();
               setTimeout(() => {
                 setIsAgree(false);
@@ -53,7 +51,7 @@ const FourthSLide = observer(() => {
           </div>
           <div
             onClick={() => {
-              Store.changeLabel("slide4", 6);
+              Store.changeLabel("lenstype", 6);
               Store.toNextSlide();
               setTimeout(() => {
                 setIsAgree(false);
@@ -64,7 +62,7 @@ const FourthSLide = observer(() => {
           </div>
           <div
             onClick={() => {
-              Store.changeLabel("slide4", 7);
+              Store.changeLabel("lenstype", 7);
               Store.toNextSlide();
               setTimeout(() => {
                 setIsAgree(false);

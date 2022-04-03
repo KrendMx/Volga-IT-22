@@ -2,16 +2,16 @@ import { makeAutoObservable, makeObservable } from "mobx";
 
 class Info {
   userInfo = {
-    slide1: 0,
-    slide2: 0,
-    slide3: 0,
-    slide4: 0,
-    slide5: 0,
-    slide6: 0,
-    slide7: 0,
-    slide8: 0,
-    slide9: 0,
-    slide10: 0,
+    gender: 0,
+    eyewear_type: 0,
+    lenstype: 0,
+    frame_size: 0,
+    blue_light: 0,
+    shade: 0,
+    face_shape: 0,
+    facial_features: 0,
+    shape: 0,
+    brand: 0,
   };
 
   initialSlide = 0;

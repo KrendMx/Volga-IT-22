@@ -12,7 +12,7 @@ const SecondSlide = observer(() => {
         <h2>You are looking for</h2>
         <div
           onClick={() => {
-            Information.changeLabel("slide1", 5);
+            Information.changeLabel("gender", 5);
             Information.toNextSlide();
           }}
         >
@@ -21,7 +21,7 @@ const SecondSlide = observer(() => {
         </div>
         <div
           onClick={() => {
-            Information.changeLabel("slide1", 4);
+            Information.changeLabel("gender", 4);
             Information.toNextSlide();
           }}
         >

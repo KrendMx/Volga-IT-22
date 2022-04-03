@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Slides from "../SecondSlide/SecondSlide.styles";
 import Information from "../../Store";
 import { observer } from "mobx-react-lite";
@@ -16,7 +16,7 @@ const ThirdSlide = observer(() => {
           What type of glasses are you looking for?
         </h2>
         <div onClick={() => {
-          Information.changeLabel("slide2",210)
+          Information.changeLabel("eyewear_type",210)
           Information.toBetweenBanner()
         }}>
           <img
@@ -27,7 +27,7 @@ const ThirdSlide = observer(() => {
           <p>Eyeglasses</p>
         </div>
         <div onClick={() => {
-          Information.changeLabel("slide2",211)
+          Information.changeLabel("eyewear_type",211)
           Information.toBetweenBanner()
         }}>
           <img

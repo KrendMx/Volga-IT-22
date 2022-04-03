@@ -18,7 +18,7 @@ const MyComponent = observer(() => {
       <Size min={colors[0]} mid={colors[1]} max={colors[2]} />
       <div
         onClick={() => {
-          Information.changeLabel("slide4", "68");
+          Information.changeLabel("frame_size", "68");
           Information.toBetweenBanner(true);
         }}
         onMouseOver={() => {
@@ -33,7 +33,7 @@ const MyComponent = observer(() => {
       </div>
       <div
         onClick={() => {
-          Information.changeLabel("slide4", "67");
+          Information.changeLabel("frame_size", "67");
           Information.toBetweenBanner(true);
         }}
         onMouseOver={() => {
@@ -48,7 +48,7 @@ const MyComponent = observer(() => {
       </div>
       <div
         onClick={() => {
-          Information.changeLabel("slide4", "66");
+          Information.changeLabel("frame_size", "66");
           Information.toBetweenBanner(true);
         }}
         onMouseOver={() => {

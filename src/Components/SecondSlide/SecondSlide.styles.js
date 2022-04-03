@@ -10,7 +10,6 @@ const Slides = styled.div`
   padding: 1rem 0px 110%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
   & div {
     padding: 1rem;
@@ -38,14 +37,16 @@ const Slides = styled.div`
   }
 
   & h2 {
+    width:60%;
+    margin:1rem auto;
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
   }
 
   & h3 {
+    align-content: end;
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
-    margin-top: 8rem;
     font-size: 16px;
     cursor: pointer;
     color: #3a4850;
