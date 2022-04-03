@@ -9,7 +9,7 @@ import { ContainerChoose, TextImageAndLineBetween, } from "../../Styles";
 const Sunglasses = observer(() => {
   return (
       <ContainerChoose>
-        <h2>Every face shape has a perfect fit. What's yours?</h2>
+        <h2 style={{fontSize:"20px", width:"90%"}}>When you’re out and about, which shade of lenses do you prefer?</h2>
         <TextImageAndLineBetween>
           <img src={Dark} />
           <p>Dark Shade</p>

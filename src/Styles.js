@@ -10,7 +10,6 @@ const ContainerChoose = styled.div`
   padding: 1rem 0px 110%;
   display: flex;
   flex-direction: column;
-
   div:nth-of-type(n) {
     &:hover {
       background-color: #eaeaea;
@@ -19,6 +18,7 @@ const ContainerChoose = styled.div`
 
   & h2 {
     width: 60%;
+    font-size:20px;
     margin: 1rem auto;
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
@@ -128,7 +128,60 @@ const TextAndImage = styled.div`
   }
 `;
 
-const TextImageAndLineBetween = styled.div``;
+const TextImageAndLineBetween = styled.div`
+  cursor: pointer;
+  background-color: white;
+  border-radius: 1rem;
+  margin: 3%;
+  padding: 1rem;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: flex-start;
+  & p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    color: #425a60;
+    padding:3%;
+    border-left: 2px solid #DEDEDE;
+  }
+  & img {
+    width: 15%;
+    margin-right:3%;
+  }
+`;
+
+const Headers = styled.div`
+  width: 100%;
+  padding: 4% 0;
+  margin: 0 auto;
+  background: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  & img {
+    width: 200px;
+    height: auto;
+    image-rendering: optimizeQuality;
+  }
+  & div {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+  & button {
+    padding: 1%;
+    border: 0;
+    background: 0;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 10%;
+    &:hover {
+      transform: scale(1.4);
+    }
+  }
+`;
 
 export {
   ContainerChoose,
@@ -136,4 +189,5 @@ export {
   TextUnderImage,
   TextAndImage,
   TextImageAndLineBetween,
+  Headers
 };
