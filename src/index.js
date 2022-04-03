@@ -1,11 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App url={document.getElementById("glasses-quiz-widget").dataset.source}/>
-  </React.StrictMode>,
-  document.getElementById('glasses-quiz-widget')
+  <App url={document.getElementById("glasses-quiz-widget").dataset.source} />,
+  document.getElementById("glasses-quiz-widget")
 );

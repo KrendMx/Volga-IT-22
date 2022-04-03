@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import Information from "../../Store";
+import React from "react";
 import Slides from "../FirstSlide/FirstSlide.Styles";
-import "animate.css";
+
+import "animate.css"
 
 const BetweenSlide = (props) => {
   return (
     <div>
       <Slides>
-        <div className={"animate__animated animate__heartBeat animate__infinite"} style={{ paddingTop: "15%" }}>
+        <div className={"animate__animated animate__bounce animate__infinite"} style={{ paddingTop: "15%", animationDuration:"1.5s"}}>
           <svg
             width="182"
             height="182"

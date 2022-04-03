@@ -15,9 +15,17 @@ const Header = observer(() => {
           ) : (
             <button
               onClick={() => {
-                Information.swiperSlides[3].className !== "swiper-slide swiper-slide-prev"
-                  ? Information.toPrevSlide()
-                  : Information.toPrevBannerSlide();
+                console.log(Information.swiperSlides[6].className);
+                if (
+                  Information.swiperSlides[3].className ===
+                    "swiper-slide swiper-slide-prev" ||
+                  Information.swiperSlides[6].className ===
+                    "swiper-slide swiper-slide-prev"
+                ) {
+                  Information.toPrevBannerSlide();
+                } else {
+                  Information.toPrevSlide();
+                }
               }}
             >
               <svg

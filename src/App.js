@@ -12,6 +12,7 @@ import BetweenSLide from "./Components/BetweenSlide/BetweenSLide";
 import Information from "./Store";
 import { observer } from "mobx-react-lite";
 import FourthSlide from "./Components/FourthSlide/FourthSlide";
+import FifthSlide from "./Components/FifthSlide/FifthSlide";
 
 const App = observer(({ url }) => {
   return (
@@ -43,9 +44,13 @@ const App = observer(({ url }) => {
           <FourthSlide />
         </SwiperSlide>
         {/*3. Выбор типа очков*/}
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <FifthSlide/>
+        </SwiperSlide>
         {/*4. Выбор размера душки у очков*/}
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <BetweenSLide title={"No worries, we’ve got you!"} />
+        </SwiperSlide>
         {/*5. Выбор стекол*/}
         <SwiperSlide></SwiperSlide>
         {/*6. Выбор формы лица*/}

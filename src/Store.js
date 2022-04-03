@@ -24,12 +24,12 @@ class Info {
     this.userInfo[ctx] = value;
   }
 
-  swiperSlides
+  swiperSlides;
 
-  toPrevBannerSlide(){
+  toPrevBannerSlide() {
     this.swiperPrevSlide();
     this.swiperPrevSlide();
-    this.initialSlide -=10
+    this.initialSlide -= 10;
   }
 
   swiperNextSlide() {}
@@ -38,11 +38,11 @@ class Info {
 
   swiperStartSlide() {}
 
-  toBetweenBanner() {
+  toBetweenBanner(val) {
     this.swiperNextSlide();
     setTimeout(() => {
       this.swiperNextSlide();
-      this.initialSlide += 10;
+      if (!val) this.initialSlide += 10;
     }, 2000);
   }
 
