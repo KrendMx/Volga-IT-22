@@ -1,11 +1,7 @@
 import React from "react";
-
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
-import "swiper/swiper-bundle.css";
-
 import Information from "./Store/Store";
 import { observer } from "mobx-react-lite";
-
 import FourthSlide from "./Components/FourthSlide/FourthSlide";
 import FifthSlide from "./Components/FifthSlide/FifthSlide";
 import FifthSlideP2 from "./Components/FifthSLideP2/FifthSlideP2";
@@ -16,6 +12,8 @@ import SecondSlide from "./Components/SecondSlide/SecondSlide";
 import ThirdSlide from "./Components/ThirdSlide/ThirdSlide";
 import BetweenSLide from "./Components/BetweenSlide/BetweenSLide";
 import { AppContainer } from "./Styles";
+import SeventhSlide from "./Components/SeventhSlide/SeventhSlide";
+import EightSlide from "./Components/EightSlide/EightSlide";
 
 const App = observer(({ url }) => {
   return (
@@ -69,9 +67,13 @@ const App = observer(({ url }) => {
           <SixthSlide />
         </SwiperSlide>
         {/*7. Выбор черт лица*/}
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <SeventhSlide/>
+        </SwiperSlide>
         {/*8. Выбор типа очков*/}
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <EightSlide/>
+        </SwiperSlide>
         {/*9. Предпочтения брендов*/}
         <SwiperSlide></SwiperSlide>
         {/*10. Выбор брендов. Пропускать, если предыдущий вариант выбран "Бренд не важен"*/}
