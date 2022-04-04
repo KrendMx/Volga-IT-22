@@ -1,7 +1,7 @@
 import { observer } from "mobx-react-lite";
 import React from "react";
-import { ContainerChoose, TextUnderImage } from "../../Styles";
-import Information from "../../Store/Store";
+import { ContainerChoose, TextUnderImage } from "../../../Styles";
+import Information from "../../../Store/Store";
 
 const FifthSlideP2 = observer(() => {
   return (

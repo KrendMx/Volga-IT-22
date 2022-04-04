@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Slides from "../SecondSlide/SecondSlide.styles";
+import Slides from "../2Slide/SecondSlide.styles";
 import { ContainerChoose, TextUnderImage } from "../../Styles";
 import { observer } from "mobx-react-lite";
 import Store from "../../Store/Store";

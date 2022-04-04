@@ -2,18 +2,18 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
 import Information from "./Store/Store";
 import { observer } from "mobx-react-lite";
-import FourthSlide from "./Components/FourthSlide/FourthSlide";
-import FifthSlide from "./Components/FifthSlide/FifthSlide";
-import FifthSlideP2 from "./Components/FifthSLideP2/FifthSlideP2";
-import SixthSlide from "./Components/SixthSlide/SixthSlide";
+import FourthSlide from "./Components/4Slide/FourthSlide";
+import FifthSlide from "./Components/5Slide/FifthSlide";
+import FifthSlideP2 from "./Components/5Slide/5SlideP2/FifthSlideP2";
+import SixthSlide from "./Components/6Slide/SixthSlide";
 import Header from "./Components/Header/Header";
-import FirstSlide from "./Components/FirstSlide/FirstSlide";
-import SecondSlide from "./Components/SecondSlide/SecondSlide";
-import ThirdSlide from "./Components/ThirdSlide/ThirdSlide";
+import FirstSlide from "./Components/1Slide/FirstSlide";
+import SecondSlide from "./Components/2Slide/SecondSlide";
+import ThirdSlide from "./Components/3Slide/ThirdSlide";
 import BetweenSLide from "./Components/BetweenSlide/BetweenSLide";
 import { AppContainer } from "./Styles";
-import SeventhSlide from "./Components/SeventhSlide/SeventhSlide";
-import EightSlide from "./Components/EightSlide/EightSlide";
+import SeventhSlide from "./Components/7Slide/SeventhSlide";
+import EightSlide from "./Components/8Slide/EightSlide";
 
 const App = observer(({ url }) => {
   return (

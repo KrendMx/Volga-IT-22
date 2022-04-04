@@ -3,7 +3,7 @@ import React from "react";
 import { ContainerChoose } from "../../Styles";
 import Information from "../../Store/Store"
 
-const TenthSlide = observer(() => {
+const NinethSlide = observer(() => {
   return (
     <ContainerChoose>
       <h2></h2>
@@ -13,4 +13,4 @@ const TenthSlide = observer(() => {
   );
 });
 
-export default TenthSlide;
+export default NinethSlide;
