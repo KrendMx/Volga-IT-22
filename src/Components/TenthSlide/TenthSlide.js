@@ -7,7 +7,6 @@ const TenthSlide = observer(() => {
   return (
     <ContainerChoose>
       <h2></h2>
-      <h2></h2>
       <div></div>
       <h3 onClick={()=>{Information.toNextSlide()}}>I don't know</h3>
     </ContainerChoose>
