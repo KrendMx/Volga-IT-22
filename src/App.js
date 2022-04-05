@@ -14,6 +14,7 @@ import BetweenSLide from "./Components/BetweenSlide/BetweenSLide";
 import { AppContainer } from "./Styles";
 import SeventhSlide from "./Components/7Slide/SeventhSlide";
 import EightSlide from "./Components/8Slide/EightSlide";
+import NinthSlide from "./Components/9Slide/NinethSlide";
 
 const App = observer(({ url }) => {
   return (
@@ -28,7 +29,7 @@ const App = observer(({ url }) => {
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
-        initialSlide={0}
+        initialSlide={11}
         allowTouchMove={false}
       >
         <SwiperSlide>
@@ -75,7 +76,9 @@ const App = observer(({ url }) => {
           <EightSlide/>
         </SwiperSlide>
         {/*9. Предпочтения брендов*/}
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <NinthSlide/>
+        </SwiperSlide>
         {/*10. Выбор брендов. Пропускать, если предыдущий вариант выбран "Бренд не важен"*/}
         <SwiperSlide></SwiperSlide>
         {/*11. Заключительный этап. Выведение в консоль итоговой ссылки*/}

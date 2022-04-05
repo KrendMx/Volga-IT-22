@@ -6,8 +6,7 @@ const AppContainer = styled.div`
   font-family: sans-serif;
   height: 45em;
   overflow-y: hidden;
-
-  @import "swiper-vars.scss";
+  
   @at-root {
     @font-face {
       font-family: "swiper-icons";

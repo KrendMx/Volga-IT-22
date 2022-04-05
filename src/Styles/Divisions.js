@@ -5,6 +5,7 @@ const TextUnderImage = styled.div`
   cursor: pointer;
   background-color: white;
   border-radius: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
   margin: 3%;
   transition: all 0.4s;
   & img {
@@ -19,6 +20,7 @@ const TextUnderImage = styled.div`
 
 const TextAndImage = styled.div`
   cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
   background-color: white;
   border-radius: 1rem;
   margin: 3%;
@@ -43,6 +45,7 @@ const TextAndImage = styled.div`
 const TextImageAndLineBetween = styled.div`
   cursor: pointer;
   background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
   border-radius: 1rem;
   margin: 3%;
   padding: 1rem;
@@ -61,4 +64,5 @@ const TextImageAndLineBetween = styled.div`
     margin-right: 3%;
   }
 `;
-export {TextAndImage, TextImageAndLineBetween, TextUnderImage}
+
+export { TextAndImage, TextImageAndLineBetween, TextUnderImage };

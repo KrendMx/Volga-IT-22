@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { TextAndImage, TextUnderImage, TextImageAndLineBetween } from "./Styles/Divisions";
 import Headers from "./Styles/Header"
-import { ContainerChoose, ContainerMain } from "./Styles/Containers";
+import { ContainerChoose, ContainerMain, ContainerManyCheck } from "./Styles/Containers";
 import AppContainer from "./Styles/MainContainer";
 
 const Animation = styled.div`
@@ -55,4 +55,5 @@ export {
   TextAndImage,
   TextImageAndLineBetween,
   Headers,
+  ContainerManyCheck
 };
