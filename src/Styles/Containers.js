@@ -44,6 +44,7 @@ const ContainerChoose = styled.div`
     &:disabled {
       background: #606060;
       opacity: .5;
+      cursor: auto;
       transition: all 0.2s;
 
       &:hover {

@@ -10,15 +10,15 @@
 
 Команда запустит решение. 
 
-### `https://github.com/optimaxdev/volga-it-2022`
+### ```https://github.com/optimaxdev/volga-it-2022```
 
 Ссылка на техническое задание
 
-### `https://volga-it.org/wp-content/plugins/wp-olymp/files/57ce42844e6c5878f3b325e92ac86188.pdf`
+### ```https://volga-it.org/wp-content/plugins/wp-olymp/files/57ce42844e6c5878f3b325e92ac86188.pdf```
 
 Ссылка на задание отборочного этапа
 
-### `https://github.com/optimaxdev/volga-it-2022`
+### ```https://github.com/optimaxdev/volga-it-2022```
 
 Ссылка на подробное описание каждого экрана
 

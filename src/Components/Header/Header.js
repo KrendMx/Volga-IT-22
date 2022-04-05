@@ -1,17 +1,17 @@
 import React from "react";
-import {Headers} from "../../Styles";
+import { Headers } from "../../Styles";
 import { LinearProgress, linearProgressClasses } from "@mui/material";
 import { observer } from "mobx-react-lite";
 import { styled } from "@mui/material";
-import Logo from "../../Images/HeaderImage/Logo"
+import Logo from "../../Images/HeaderImage/Logo";
 import Information from "../../Store/Store";
 const Header = observer(() => {
   return (
     <div>
       <Headers>
         <div>
-          {!Information.initialSlide ? (
-            <img src={Logo} alt={"logo"}/>
+          {!Information.initialSlide || Information.initialSlide === 100 ? (
+            <img src={Logo} alt={"logo"} />
           ) : (
             <button
               onClick={() => {
@@ -25,7 +25,7 @@ const Header = observer(() => {
                   "swiper-slide swiper-slide-prev"
                 ) {
                   Information.toPrevBannerSlide();
-                  Information.initialSlide +=10
+                  Information.initialSlide += 10;
                 } else {
                   Information.toPrevSlide();
                 }
@@ -54,7 +54,14 @@ const Header = observer(() => {
                 console.log(Information.swiperSlides[3].className);
               }}
             >
-              {Information.initialSlide / 10}/10
+              {(() => {
+                if (Information.initialSlide < 99) {
+                  return `${Information.initialSlide / 10} /10`;
+                } else {
+                  Information.initialSlide = 100;
+                  return null;
+                }
+              })()}
             </p>
           ) : null}
           {Information.initialSlide ? (

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-const Containter = ({ title, imageSrc }) => {
+const Container = ({ title, imageSrc }) => {
   const [vis, setVis] = useState(false);
 
   return (
     <span
       id={title}
       className={"checkDiv"}
-      onClick={(e) => {
+      onClick={() => {
         if (document.getElementById(title).className === "checkDiv active") {
           document.getElementById(title).className = "checkDiv";
           setVis(false);
@@ -39,10 +39,10 @@ const Containter = ({ title, imageSrc }) => {
           </svg>
         </span>
       ) : null}
-      <img src={imageSrc} />
+      <img src={imageSrc} alt={"Форма оправы"}/>
       <p>{title}</p>
     </span>
   );
 };
 
-export default Containter;
+export default Container;

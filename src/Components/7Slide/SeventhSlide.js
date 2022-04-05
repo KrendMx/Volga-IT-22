@@ -22,10 +22,10 @@ const SeventhSlide = observer(() => {
           Information.toNextSlide();
         }}
       >
-        {Information.userInfo.gender === "4" ? <img src={menLonger} /> : null}
-        {Information.userInfo.gender === "5" ? <img src={womanLonger} /> : null}
+        {Information.userInfo.gender === "4" ? <img src={menLonger} alt={'Лицо вытянутой формы'}/> : null}
+        {Information.userInfo.gender === "5" ? <img src={womanLonger} alt={'Лицо вытянутой формы'}/> : null}
         {!Information.userInfo.gender ? (
-          <img style={{ width: "30%" }} src={nebinLonger} />
+          <img style={{ width: "30%" }} src={nebinLonger} alt={'Лицо вытянутой формы'}/>
         ) : null}
         <p>I have a long face</p>
       </TextImageAndLineBetween>

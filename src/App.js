@@ -15,6 +15,7 @@ import { AppContainer } from "./Styles";
 import SeventhSlide from "./Components/7Slide/SeventhSlide";
 import EightSlide from "./Components/8Slide/EightSlide";
 import NinthSlide from "./Components/9Slide/NinethSlide";
+import TenthSlide from "./Components/10Slide/10Slide";
 
 const App = observer(({ url }) => {
   return (
@@ -29,7 +30,7 @@ const App = observer(({ url }) => {
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
-        initialSlide={11}
+        initialSlide={12}
         allowTouchMove={false}
       >
         <SwiperSlide>
@@ -39,27 +40,27 @@ const App = observer(({ url }) => {
         <SwiperSlide>
           <SecondSlide />
         </SwiperSlide>
-        {/*1. Выбор пола*/}
+        {/*Выбор пола*/}
         <SwiperSlide>
           <ThirdSlide />
         </SwiperSlide>
-        {/*2. Выбор моделей*/}
+        {/*Выбор моделей*/}
         <SwiperSlide>
           <BetweenSLide title={"Let's get to know you!"} />
         </SwiperSlide>
-        {/*Страница между слайдом 2-3*/}
+        {/*Страница между слайдами*/}
         <SwiperSlide>
           <FourthSlide />
         </SwiperSlide>
-        {/*3. Выбор типа очков*/}
+        {/*Выбор типа очков*/}
         <SwiperSlide>
           <FifthSlide />
         </SwiperSlide>
-        {/*4. Выбор размера душки у очков*/}
+        {/*Выбор размера душки у очков*/}
         <SwiperSlide>
           <BetweenSLide title={"No worries, we’ve got you!"} />
         </SwiperSlide>
-        {/*5. Выбор стекол*/}
+        {/*Страница между слайдами*/}
         <SwiperSlide>
           <FifthSlideP2 />
         </SwiperSlide>
@@ -69,19 +70,25 @@ const App = observer(({ url }) => {
         </SwiperSlide>
         {/*7. Выбор черт лица*/}
         <SwiperSlide>
-          <SeventhSlide/>
+          <SeventhSlide />
         </SwiperSlide>
         {/*8. Выбор типа очков*/}
         <SwiperSlide>
-          <EightSlide/>
+          <EightSlide />
         </SwiperSlide>
-        {/*9. Предпочтения брендов*/}
+        {/* */}
         <SwiperSlide>
-          <NinthSlide/>
+          <NinthSlide />
         </SwiperSlide>
-        {/*10. Выбор брендов. Пропускать, если предыдущий вариант выбран "Бренд не важен"*/}
+        {/*Предпочтение формы очков*/}
+        <SwiperSlide>
+          <TenthSlide />
+        </SwiperSlide>
+        {/*Предпочтения брендов*/}
         <SwiperSlide></SwiperSlide>
-        {/*11. Заключительный этап. Выведение в консоль итоговой ссылки*/}
+        {/*Выбор брендов. Пропускать, если предыдущий вариант выбран "Бренд не важен"*/}
+        <SwiperSlide></SwiperSlide>
+        {/*Заключительный этап. Выведение в консоль итоговой ссылки*/}
       </Swiper>
     </AppContainer>
   );
