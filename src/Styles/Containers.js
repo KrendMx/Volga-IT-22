@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 const ContainerChoose = styled.div`
-
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
   height: 60%;
   position: relative;
   background: linear-gradient(180deg, #e8f0f2 0%, #e8f0f2 100%);
@@ -43,7 +42,7 @@ const ContainerChoose = styled.div`
 
     &:disabled {
       background: #606060;
-      opacity: .5;
+      opacity: 0.5;
       cursor: auto;
       transition: all 0.2s;
 
@@ -53,10 +52,17 @@ const ContainerChoose = styled.div`
     }
   }
 
+  & .h4{
+    font-family: "Open sans", sans-serif;
+    color: #425a60;
+    padding: 0;
+    margin: 0;
+  }
+
   & h2 {
     width: 60%;
     font-size: 20px;
-    margin: 1rem auto;
+    margin: 0.4rem auto;
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
   }
@@ -127,11 +133,9 @@ const ContainerMain = styled.div`
 
 const ContainerManyCheck = styled.span`
   display: grid;
-  grid-template-rows: repeat(3,30%);
-  grid-template-columns: repeat(4,47%);
+  grid-template-rows: repeat(3, 30%);
+  grid-template-columns: repeat(4, 47%);
   overflow-x: scroll;
-  
-  
 
   &::-webkit-scrollbar {
     background-color: #ffffff00;
@@ -148,11 +152,14 @@ const ContainerManyCheck = styled.span`
     background-color: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
     border-radius: 1rem;
-    margin: 3%;
-    padding: 0rem;
+    margin: 2%;
     position: relative;
+    display: flex;
+    flex-direction:column;
+    min-height:90%;
     transition: all 0.01s;
     border: 2px solid #ffffff00;
+
     & p {
       font-family: "Open Sans", sans-serif;
       font-size: 15px;

@@ -4,11 +4,12 @@ import Container from "./Container";
 import {observer} from "mobx-react-lite";
 import Information from "../../Store/Store";
 
-const ChoosingSlide = observer(({ ctx, data }) => {
+const ChoosingSlide = observer(({ ctx, data, visTitle }) => {
   const [dis, setDis] = useState(false);
   return (
     <ContainerChoose>
       <h2 style={{ width: "90%" }}>Which frame style are you looking for?</h2>
+      <p className={"h4"}>You can pick more than one.</p>
       <ContainerManyCheck
         id={"containerWithInfo"}
         onClick={() => {
@@ -21,7 +22,7 @@ const ChoosingSlide = observer(({ ctx, data }) => {
       >
         {data.map((el, index) => {
           return (
-            <Container key={index} title={el.title} imageSrc={el.imageSrc} />
+            <Container key={index} title={el.title} imageSrc={el.imageSrc} visTitle={visTitle}/>
           );
         })}
       </ContainerManyCheck>

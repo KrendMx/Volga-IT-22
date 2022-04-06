@@ -20,7 +20,7 @@ const NinthSlide = () => {
 
   return (
     <>
-      <ChoosingSlide ctx={"shape"} data={NinthSlideData} />
+      <ChoosingSlide ctx={"shape"} data={NinthSlideData} visTitle={true}/>
     </>
   );
 };

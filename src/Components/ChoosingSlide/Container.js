@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Container = ({ title, imageSrc }) => {
+const Container = ({ title, imageSrc, visTitle }) => {
   const [vis, setVis] = useState(false);
 
   return (
@@ -39,8 +39,10 @@ const Container = ({ title, imageSrc }) => {
           </svg>
         </span>
       ) : null}
-      <img src={imageSrc} alt={"Форма оправы"}/>
-      <p>{title}</p>
+      <span>
+        <img src={imageSrc} alt={"Форма оправы"} />
+      </span>
+      {visTitle ? <p>{title}</p> : null}
     </span>
   );
 };

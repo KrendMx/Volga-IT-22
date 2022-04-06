@@ -55,7 +55,7 @@ const Header = observer(() => {
               }}
             >
               {(() => {
-                if (Information.initialSlide < 99) {
+                if (Information.initialSlide <= 100) {
                   return `${Information.initialSlide / 10} /10`;
                 } else {
                   Information.initialSlide = 100;
