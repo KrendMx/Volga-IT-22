@@ -25,14 +25,14 @@ const App = observer(({ url }) => {
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
       <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&family=Roboto:wght@100;300;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&family=Roboto:wght@100;300;500&display=swap"
         rel="stylesheet"
       />
       <Header slideNuber={Information.initialSlide} />
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
-        initialSlide={14}
+        initialSlide={0}
         allowTouchMove={false}
       >
         <SwiperSlide>

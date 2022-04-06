@@ -18,7 +18,6 @@ const TenthSlide = observer(() => {
         onClick={() => {
           Information.toNextSlide();
           Information.toNextSlide();
-          Information.initialSlide += 11
         }}
       >
         <p>No, brand isn't important</p>
