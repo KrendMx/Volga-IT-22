@@ -17,6 +17,7 @@ import EightSlide from "./Components/8Slide/EightSlide";
 import NinthSlide from "./Components/9Slide/NinethSlide";
 import TenthSlide from "./Components/10Slide/10Slide";
 import EleventhSlide from "./Components/11Slide/EleventhSlide";
+import TwelveSlide from "./Components/12Slide/TwelveSlide";
 
 const App = observer(({ url }) => {
   return (
@@ -24,14 +25,14 @@ const App = observer(({ url }) => {
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
       <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&family=Roboto:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&family=Roboto:wght@100;300;500;700&display=swap"
         rel="stylesheet"
       />
       <Header slideNuber={Information.initialSlide} />
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
-        initialSlide={11}
+        initialSlide={14}
         allowTouchMove={false}
       >
         <SwiperSlide>
@@ -90,7 +91,9 @@ const App = observer(({ url }) => {
           <EleventhSlide/>
         </SwiperSlide>
         {/*Выбор брендов. Пропускать, если предыдущий вариант выбран "Бренд не важен"*/}
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <TwelveSlide/>
+        </SwiperSlide>
         {/*Заключительный этап. Выведение в консоль итоговой ссылки*/}
       </Swiper>
     </AppContainer>

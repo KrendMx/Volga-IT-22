@@ -52,7 +52,7 @@ const ContainerChoose = styled.div`
     }
   }
 
-  & .h4{
+  & .h4 {
     font-family: "Open sans", sans-serif;
     color: #425a60;
     padding: 0;
@@ -85,12 +85,17 @@ const ContainerMain = styled.div`
   text-align: center;
   padding-bottom: 110%;
 
+  & p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+  }
+
   & button {
     background: linear-gradient(270deg, #45c7fa 0%, #2196f3 100%);
     box-shadow: 4px 1px rgba(0, 0, 0, 0.03);
     border-radius: 24px;
     font-family: "Roboto", sans-serif;
-    font-style: normal;
+    font-weight: 700;
     color: white;
     border: 0;
     padding: 1rem;
@@ -133,7 +138,7 @@ const ContainerMain = styled.div`
 
 const ContainerManyCheck = styled.span`
   display: grid;
-  grid-template-rows: repeat(3, 30%);
+  grid-template-rows: repeat(3, 25%);
   grid-template-columns: repeat(4, 47%);
   overflow-x: scroll;
 
@@ -155,8 +160,8 @@ const ContainerManyCheck = styled.span`
     margin: 2%;
     position: relative;
     display: flex;
-    flex-direction:column;
-    min-height:90%;
+    flex-direction: column;
+    align-items: center;
     transition: all 0.01s;
     border: 2px solid #ffffff00;
 

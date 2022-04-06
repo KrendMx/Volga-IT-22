@@ -6,6 +6,7 @@ const Container = ({ title, imageSrc, visTitle }) => {
   return (
     <span
       id={title}
+      style={{minHeight: !visTitle ? "90px" : "auto"}}
       className={"checkDiv"}
       onClick={() => {
         if (document.getElementById(title).className === "checkDiv active") {
@@ -40,9 +41,9 @@ const Container = ({ title, imageSrc, visTitle }) => {
         </span>
       ) : null}
       <span>
-        <img src={imageSrc} alt={"Форма оправы"} />
+        <img style={{paddingTop:!visTitle ? "35px" : "auto"}} src={imageSrc} alt={"Форма оправы"} />
       </span>
-      {visTitle ? <p>{title}</p> : null}
+      {visTitle ? <p>{title}</p> : <p>{null}</p>}
     </span>
   );
 };

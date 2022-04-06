@@ -3,7 +3,6 @@ const AppContainer = styled.div`
   width: 25rem;
   position: relative;
   margin: 0;
-  font-family: sans-serif;
   height: 45em;
   overflow-y: hidden;
   

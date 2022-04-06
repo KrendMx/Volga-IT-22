@@ -10,7 +10,7 @@ const Header = observer(() => {
     <div>
       <Headers>
         <div>
-          {!Information.initialSlide || Information.initialSlide === 100 ? (
+          {!Information.initialSlide || Information.initialSlide === "100" ? (
             <img src={Logo} alt={"logo"} />
           ) : (
             <button
@@ -58,7 +58,7 @@ const Header = observer(() => {
                 if (Information.initialSlide <= 100) {
                   return `${Information.initialSlide / 10} /10`;
                 } else {
-                  Information.initialSlide = 100;
+                  Information.initialSlide = "100";
                   return null;
                 }
               })()}
