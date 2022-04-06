@@ -53,7 +53,7 @@ class Info {
 
   toPrevSlide(val) {
     this.swiperPrevSlide();
-    this.initialSlide -= 10
+    this.initialSlide -= 10;
   }
 
   toStartSlide() {
@@ -68,11 +68,7 @@ class Info {
   }
 
   generateLink() {
-    let link;
-    for (let key in this.userInfo) {
-      link += this.userInfo[key];
-    }
-    return link;
+
   }
 }
 export default new Info();

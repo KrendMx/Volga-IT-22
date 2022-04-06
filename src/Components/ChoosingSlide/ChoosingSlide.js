@@ -11,11 +11,11 @@ const ChoosingSlide = observer(({ ctx, data, visTitle }) => {
       <h2 style={{ width: "90%" }}>Which frame style are you looking for?</h2>
       <p className={"h4"}>You can pick more than one.</p>
       <ContainerManyCheck
-        id={"containerWithInfo"}
+        id={ctx}
         onClick={() => {
           setDis(
             !!Array.from(
-              document.getElementById("containerWithInfo").children
+              document.getElementById(ctx).children
             ).filter((el) => el.className !== "checkDiv").length
           );
         }}
@@ -30,7 +30,7 @@ const ChoosingSlide = observer(({ ctx, data, visTitle }) => {
         disabled={!dis}
         onClick={() => {
           let userChoose = Array.from(
-            document.getElementById("containerWithInfo").children
+            document.getElementById(ctx).children
           ).filter((el) => el.className !== "checkDiv");
           let res = userChoose
             .map((el) => {

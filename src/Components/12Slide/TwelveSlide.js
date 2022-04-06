@@ -16,35 +16,31 @@ const TwelveSlide = observer(() => {
         >
           <g filter="url(#filter0_dd_1_4060)">
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M156.52 90.76C156.52 127.078 127.078 156.52 90.76 156.52C54.4418 156.52 25 127.078 25 90.76C25 54.4418 54.4418 25 90.76 25C127.078 25 156.52 54.4418 156.52 90.76Z"
               fill="#F7F8F9"
             />
           </g>
-          <path d="M86 50.28H89.84" stroke="#2196F3" stroke-width="1.2" />
-          <path d="M92.72 50.28H96.56" stroke="#2196F3" stroke-width="1.2" />
-          <path d="M91.2798 45V48.84" stroke="#2196F3" stroke-width="1.2" />
-          <path d="M91.2798 51.72V55.56" stroke="#2196F3" stroke-width="1.2" />
+          <path d="M86 50.28H89.84" stroke="#2196F3" strokeWidth="1.2" />
+          <path d="M92.72 50.28H96.56" stroke="#2196F3" strokeWidth="1.2" />
+          <path d="M91.2798 45V48.84" stroke="#2196F3" strokeWidth="1.2" />
+          <path d="M91.2798 51.72V55.56" stroke="#2196F3" strokeWidth="1.2" />
           <path
             d="M55 69.4667L57.7154 66.7518"
             stroke="#2196F3"
-            stroke-width="1.2"
+            strokeWidth="1.2"
           />
           <path
             d="M59.7515 64.715L62.4668 62.0001"
             stroke="#2196F3"
-            stroke-width="1.2"
+            strokeWidth="1.2"
           />
-          <path
-            d="M55 62L57.7154 64.7149"
-            stroke="#2196F3"
-            stroke-width="1.2"
-          />
+          <path d="M55 62L57.7154 64.7149" stroke="#2196F3" strokeWidth="1.2" />
           <path
             d="M59.7515 66.7517L62.4668 69.4666"
             stroke="#2196F3"
-            stroke-width="1.2"
+            strokeWidth="1.2"
           />
           <path
             d="M119.75 78.75H104.639C107.196 77.295 108.5 75.215 108.5 72.5C108.5 65.7775 104.22 65 101 65C96.8737 65 92.935 69.7363 91 74.5025C89.065 69.7363 85.1275 65 81 65C77.78 65 73.5 65.7775 73.5 72.5C73.5 75.215 74.8037 77.295 77.3612 78.75H62.25C61.56 78.75 61 79.3087 61 80V95C61 95.6912 61.56 96.25 62.25 96.25H64.75H67.25H84.75V81.25H87.25V96.25H94.75V81.25H97.25V96.25H114.75H117.25H119.75C120.44 96.25 121 95.6912 121 95V80C121 79.3087 120.44 78.75 119.75 78.75ZM76 72.5C76 68.3175 77.8337 67.5 81 67.5C84.64 67.5 88.9563 73.9462 89.6525 78.735C83.1325 78.5925 76 77.33 76 72.5ZM92.3475 78.735C93.0438 73.9462 97.36 67.5 101 67.5C104.166 67.5 106 68.3175 106 72.5C106 77.33 98.8675 78.5925 92.3475 78.735ZM97.25 98.75H114.75V123.75C114.75 124.441 114.19 125 113.5 125H68.5C67.81 125 67.25 124.441 67.25 123.75V98.75H84.75V122.5H87.25V98.75H94.75V122.5H97.25V98.75Z"
@@ -58,9 +54,9 @@ const TwelveSlide = observer(() => {
               width="181.52"
               height="181.52"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feColorMatrix
                 in="SourceAlpha"
                 type="matrix"
@@ -105,10 +101,23 @@ const TwelveSlide = observer(() => {
           </defs>
         </svg>
       </span>
-      <h1>We've found some awesome frames for you!</h1>
-      <h2>Send the results to your email to receive special discounts.</h2>
-      <button>Send</button>
-      <p>By clicking ‘Send’ you agree to our Terms of Use & Privacy Policy and receiving promotion emails</p>
+      <h1 style={{ fontSize: "20px", width: "80%", margin: "auto" }}>
+        We've found some awesome frames for you!
+      </h1>
+      <h2 style={{ fontSize: "16px" }}>
+        Send the results to your email to receive special discounts.
+      </h2>
+      <button
+        onClick={() => {
+          console.log(Information.userInfo);
+        }}
+      >
+        Send
+      </button>
+      <p style={{ margin: "10vh auto 0", fontSize: "14.06px", width: "80%" }}>
+        By clicking ‘Send’ you agree to our Terms of Use & Privacy Policy and
+        receiving promotion emails
+      </p>
     </ContainerMain>
   );
 });

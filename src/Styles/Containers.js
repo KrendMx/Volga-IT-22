@@ -95,7 +95,7 @@ const ContainerMain = styled.div`
     box-shadow: 4px 1px rgba(0, 0, 0, 0.03);
     border-radius: 24px;
     font-family: "Roboto", sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     color: white;
     border: 0;
     padding: 1rem;
@@ -138,7 +138,7 @@ const ContainerMain = styled.div`
 
 const ContainerManyCheck = styled.span`
   display: grid;
-  grid-template-rows: repeat(3, 25%);
+  grid-template-rows: repeat(3, 30%);
   grid-template-columns: repeat(4, 47%);
   overflow-x: scroll;
 

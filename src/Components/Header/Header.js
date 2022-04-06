@@ -10,7 +10,7 @@ const Header = observer(() => {
     <div>
       <Headers>
         <div>
-          {!Information.initialSlide || Information.initialSlide === "100" ? (
+          {!(Information.initialSlide || Information.initialSlide >= 100) ? (
             <img src={Logo} alt={"logo"} />
           ) : (
             <button
@@ -55,10 +55,9 @@ const Header = observer(() => {
               }}
             >
               {(() => {
-                if (Information.initialSlide <= 100 || typeof Information.initialSlide !== 'string') {
+                if (Information.initialSlide <= 100) {
                   return `${Information.initialSlide / 10} /10`;
                 } else {
-                  Information.initialSlide = "100";
                   return null;
                 }
               })()}
@@ -116,20 +115,28 @@ const Header = observer(() => {
           )}
         </div>
       </Headers>
-      {Information.initialSlide !== 0 ? (
+      {Information.initialSlide !== 0 && Information.initialSlide <= 100 ? (
         <BorderLinearProgress
           value={Information.initialSlide}
           valuemax={100}
           variant={"determinate"}
-          style={{ height: "0.6rem", backgroundColor: "lightgrey" }}
+          style={{ height: "0.5vh", backgroundColor: "lightgrey" }}
         />
+      ) : Information.initialSlide > 100 ? (
+        <div
+          style={{
+            minWidth: "700px",
+            minHeight: "0.5vh",
+            backgroundImage: "linear-gradient(to right, #3797FA, #45C9FF)",
+          }}
+        >
+        </div>
       ) : null}
     </div>
   );
 });
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
-  height: 10,
   borderRadius: 5,
   [`&.${linearProgressClasses.colorPrimary}`]: {
     borderRadius: "0 0 0 0",

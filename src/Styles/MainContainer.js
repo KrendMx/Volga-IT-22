@@ -4,7 +4,7 @@ const AppContainer = styled.div`
   position: relative;
   margin: 0;
   height: 45em;
-  overflow-y: hidden;
+  overflow: hidden;
   
   @at-root {
     @font-face {
