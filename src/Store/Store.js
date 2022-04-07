@@ -15,6 +15,7 @@ class Info {
   };
 
   initialSlide = 0;
+  initialLink = "";
 
   constructor() {
     makeAutoObservable(this);
@@ -22,6 +23,10 @@ class Info {
 
   changeLabel(ctx, value) {
     this.userInfo[ctx] = value;
+  }
+
+  changeInitialLink(value) {
+    this.initialLink = value;
   }
 
   swiperSlides;
@@ -59,6 +64,18 @@ class Info {
   toStartSlide() {
     this.swiperStartSlide();
     this.initialSlide = 0;
+    this.userInfo = {
+      gender: 0,
+      eyewear_type: 0,
+      lenstype: 0,
+      frame_size: 0,
+      blue_light: 0,
+      shade: 0,
+      face_shape: 0,
+      facial_features: 0,
+      shape: 0,
+      brand: 0,
+    };
   }
 
   changeSlide(func1, func2, func3) {
@@ -68,7 +85,13 @@ class Info {
   }
 
   generateLink() {
-
+    let link = this.initialLink;
+    for (let key in this.userInfo) {
+      if (this.userInfo[key] !== 0) {
+        link += key + "=" + this.userInfo[key] + "&";
+      }
+    }
+    return link.split("").slice(0, -1).join("");
   }
 }
 export default new Info();

@@ -3,7 +3,7 @@ import styled from "styled-components";
 const ContainerChoose = styled.div`
   width: 100%;
   margin: 0 auto;
-  height: 60%;
+  height: 100%;
   position: relative;
   background: linear-gradient(180deg, #e8f0f2 0%, #e8f0f2 100%);
   text-align: center;

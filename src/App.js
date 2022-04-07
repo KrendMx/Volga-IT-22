@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
 import Information from "./Store/Store";
 import { observer } from "mobx-react-lite";
@@ -20,6 +20,11 @@ import EleventhSlide from "./Components/11Slide/EleventhSlide";
 import TwelveSlide from "./Components/12Slide/TwelveSlide";
 
 const App = observer(({ url }) => {
+
+  useEffect(()=>{
+    Information.changeInitialLink(url)
+  },[])
+
   return (
     <AppContainer>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,7 +37,7 @@ const App = observer(({ url }) => {
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
-        initialSlide={14}
+        initialSlide={0}
         allowTouchMove={false}
       >
         <SwiperSlide>

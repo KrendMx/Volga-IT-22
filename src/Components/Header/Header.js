@@ -10,7 +10,7 @@ const Header = observer(() => {
     <div>
       <Headers>
         <div>
-          {!(Information.initialSlide || Information.initialSlide >= 100) ? (
+          {(!Information.initialSlide || Information.initialSlide === 110) ? (
             <img src={Logo} alt={"logo"} />
           ) : (
             <button

@@ -109,7 +109,7 @@ const TwelveSlide = observer(() => {
       </h2>
       <button
         onClick={() => {
-          console.log(Information.userInfo);
+          console.log(Information.generateLink());
         }}
       >
         Send
