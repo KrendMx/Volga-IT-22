@@ -51,6 +51,10 @@ class Info {
     }, 2000);
   }
 
+  getValue(ctx){
+    return this.userInfo[ctx]
+  }
+
   toNextSlide() {
     this.swiperNextSlide();
     this.initialSlide += 10;
@@ -85,7 +89,7 @@ class Info {
   }
 
   generateLink() {
-    let link = this.initialLink;
+    let link = this.initialLink + "?";
     for (let key in this.userInfo) {
       if (this.userInfo[key] !== 0) {
         link += key + "=" + this.userInfo[key] + "&";
