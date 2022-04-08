@@ -11,7 +11,7 @@ import darkShade from "../../Images/SixthSlideImages/darkShade";
 
 const Sunglasses = observer(() => {
   return (
-    <ContainerChoose>
+    <ContainerChoose style={{justifyContent:"flex-start"}}>
       <h2 style={{ fontSize: "20px", width: "90%" }}>
         When you’re out and about, which shade of lenses do you prefer?
       </h2>

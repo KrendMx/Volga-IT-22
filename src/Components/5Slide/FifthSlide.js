@@ -15,7 +15,7 @@ const MyComponent = observer(() => {
 
   return (
     <ContainerChoose>
-      <h2 style={{ width: "60%", margin: "1em auto" }}>
+      <h2 style={{ width: "60%", margin: "auto" }}>
         What’s your current frame size?
       </h2>
       <Size min={colors[0]} mid={colors[1]} max={colors[2]} />

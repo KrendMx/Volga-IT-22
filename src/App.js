@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Information from "./Store/Store";
 import { observer } from "mobx-react-lite";
 import FourthSlide from "./Components/4Slide/FourthSlide";
@@ -18,90 +18,93 @@ import NinthSlide from "./Components/9Slide/NinethSlide";
 import TenthSlide from "./Components/10Slide/10Slide";
 import EleventhSlide from "./Components/11Slide/EleventhSlide";
 import TwelveSlide from "./Components/12Slide/TwelveSlide";
+import GlobalStyle from "./Styles/GlobalSwiper";
 
 const App = observer(({ url }) => {
-
-  useEffect(()=>{
-    Information.changeInitialLink(url)
-  },[])
+  useEffect(() => {
+    Information.changeInitialLink(url);
+  }, []);
 
   return (
-    <AppContainer>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&family=Roboto:wght@100;300;500&display=swap"
-        rel="stylesheet"
-      />
-      <Header slideNuber={Information.initialSlide} />
-      <Swiper
-        spaceBetween={0}
-        slidesPerView={1}
-        initialSlide={0}
-        allowTouchMove={false}
-      >
-        <SwiperSlide>
-          <FirstSlide />
-        </SwiperSlide>
-        {/*Начальный слайд*/}
-        <SwiperSlide>
-          <SecondSlide />
-        </SwiperSlide>
-        {/*Выбор пола*/}
-        <SwiperSlide>
-          <ThirdSlide />
-        </SwiperSlide>
-        {/*Выбор моделей*/}
-        <SwiperSlide>
-          <BetweenSLide title={"Let's get to know you!"} />
-        </SwiperSlide>
-        {/*Страница между слайдами*/}
-        <SwiperSlide>
-          <FourthSlide />
-        </SwiperSlide>
-        {/*Выбор типа очков*/}
-        <SwiperSlide>
-          <FifthSlide />
-        </SwiperSlide>
-        {/*Выбор размера душки у очков*/}
-        <SwiperSlide>
-          <BetweenSLide title={"No worries, we’ve got you!"} />
-        </SwiperSlide>
-        {/*Страница между слайдами*/}
-        <SwiperSlide>
-          <FifthSlideP2 />
-        </SwiperSlide>
-        {/*6. Выбор формы лица*/}
-        <SwiperSlide>
-          <SixthSlide />
-        </SwiperSlide>
-        {/*7. Выбор черт лица*/}
-        <SwiperSlide>
-          <SeventhSlide />
-        </SwiperSlide>
-        {/*8. Выбор типа очков*/}
-        <SwiperSlide>
-          <EightSlide />
-        </SwiperSlide>
-        {/* */}
-        <SwiperSlide>
-          <NinthSlide />
-        </SwiperSlide>
-        {/*Предпочтение формы очков*/}
-        <SwiperSlide>
-          <TenthSlide />
-        </SwiperSlide>
-        {/*Предпочтения брендов*/}
-        <SwiperSlide>
-          <EleventhSlide/>
-        </SwiperSlide>
-        {/*Выбор брендов. Пропускать, если предыдущий вариант выбран "Бренд не важен"*/}
-        <SwiperSlide>
-          <TwelveSlide/>
-        </SwiperSlide>
-        {/*Заключительный этап. Выведение в консоль итоговой ссылки*/}
-      </Swiper>
-    </AppContainer>
+    <>
+      <GlobalStyle />
+      <AppContainer>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&family=Roboto:wght@100;300;500&display=swap"
+          rel="stylesheet"
+        />
+        <Header slideNuber={Information.initialSlide} />
+        <Swiper
+          spaceBetween={0}
+          slidesPerView={1}
+          initialSlide={0}
+          allowTouchMove={false}
+        >
+          <SwiperSlide>
+            <FirstSlide />
+          </SwiperSlide>
+          {/*Начальный слайд*/}
+          <SwiperSlide>
+            <SecondSlide />
+          </SwiperSlide>
+          {/*Выбор пола*/}
+          <SwiperSlide>
+            <ThirdSlide />
+          </SwiperSlide>
+          {/*Выбор моделей*/}
+          <SwiperSlide>
+            <BetweenSLide title={"Let's get to know you!"} />
+          </SwiperSlide>
+          {/*Страница между слайдами*/}
+          <SwiperSlide>
+            <FourthSlide />
+          </SwiperSlide>
+          {/*Выбор типа очков*/}
+          <SwiperSlide>
+            <FifthSlide />
+          </SwiperSlide>
+          {/*Выбор размера душки у очков*/}
+          <SwiperSlide>
+            <BetweenSLide title={"No worries, we’ve got you!"} />
+          </SwiperSlide>
+          {/*Страница между слайдами*/}
+          <SwiperSlide>
+            <FifthSlideP2 />
+          </SwiperSlide>
+          {/*6. Выбор формы лица*/}
+          <SwiperSlide>
+            <SixthSlide />
+          </SwiperSlide>
+          {/*7. Выбор черт лица*/}
+          <SwiperSlide>
+            <SeventhSlide />
+          </SwiperSlide>
+          {/*8. Выбор типа очков*/}
+          <SwiperSlide>
+            <EightSlide />
+          </SwiperSlide>
+          {/* */}
+          <SwiperSlide>
+            <NinthSlide />
+          </SwiperSlide>
+          {/*Предпочтение формы очков*/}
+          <SwiperSlide>
+            <TenthSlide />
+          </SwiperSlide>
+          {/*Предпочтения брендов*/}
+          <SwiperSlide>
+            <EleventhSlide />
+          </SwiperSlide>
+          {/*Выбор брендов. Пропускать, если предыдущий вариант выбран "Бренд не важен"*/}
+          <SwiperSlide>
+            <TwelveSlide />
+          </SwiperSlide>
+          {/*Заключительный этап. Выведение в консоль итоговой ссылки*/}
+        </Swiper>
+      </AppContainer>
+    </>
   );
 });
 

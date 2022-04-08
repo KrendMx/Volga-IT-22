@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useSwiper } from "swiper/react/context.js";
+import {useSwiper} from "swiper/react";
 import { observer } from "mobx-react-lite";
 import Information from "../../Store/Store";
 import { ContainerMain } from "../../Styles";

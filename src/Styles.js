@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { TextAndImage, TextUnderImage, TextImageAndLineBetween } from "./Styles/Divisions";
 import Headers from "./Styles/Header"
 import { ContainerChoose, ContainerMain, ContainerManyCheck } from "./Styles/Containers";
-import AppContainer from "./Styles/MainContainer";
+import AppContainer from "./Styles/AppContainer";
 
 const Animation = styled.div`
   @-webkit-keyframes pulse {

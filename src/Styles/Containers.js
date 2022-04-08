@@ -2,17 +2,16 @@ import styled from "styled-components";
 
 const ContainerChoose = styled.div`
   width: 100%;
-  margin: 0 auto;
-  height: 100%;
+  margin: auto;
+  height: 90%;
   position: relative;
-  background: linear-gradient(180deg, #e8f0f2 0%, #e8f0f2 100%);
   text-align: center;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: ${(props) => (props.evenly ? "space-between" : "center")};
   display: flex;
   flex-direction: column;
   & span {
-    margin-bottom: 20%;
+    margin-bottom: 15%;
   }
   div:nth-of-type(n) {
     &:hover {
@@ -36,18 +35,15 @@ const ContainerChoose = styled.div`
     position: relative;
     text-align: center;
     transition: all 0.2s ease-in-out;
-
     &:hover {
       opacity: 0.9;
       transform: scale(1.3);
     }
-
     &:disabled {
       background: #606060;
       opacity: 0.5;
       cursor: auto;
       transition: all 0.2s;
-
       &:hover {
         transform: scale(1);
       }
@@ -64,8 +60,7 @@ const ContainerChoose = styled.div`
   & h2 {
     width: 60%;
     font-size: 20px;
-    margin: 0 auto;
-    margin-top: 5%;
+    margin: 5% auto 0;
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
   }
@@ -82,12 +77,11 @@ const ContainerChoose = styled.div`
 
 const ContainerMain = styled.div`
   width: 100%;
-  height: 100%;
+  height: 90%;
   margin: auto;
   flex-direction: column;
   justify-content: flex-start;
   display: flex;
-  background: linear-gradient(180deg, #e8f0f2 0%, #e8f0f2 100%);
   text-align: center;
   & p {
     font-family: "Roboto", sans-serif;

@@ -1,54 +1,70 @@
-## Volga-IT' 22 .Крендель М.К.
+# Getting Started with Create React App
 
-<center><h2>Компетенция: JavaScript-разработка. Санкт-Петербург, СПб ГБПОУ "Радиотехнический колледж",</h2></center>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<center><h2>Техническое описание решения</h2></center>
+## Available Scripts
 
-Приложение использует **MobX** как пакет для управления глобальным состоянием. Для самой анкеты использует библиотека **Swiper**. Все изображения закодированы в **Base64** , для написания стилей использовалась библиотека **Styled-components**. Для компиляции проекта использовался пакет **Parcel**. Также использовался пакет **MatreialUI**.
-<br/>
+In the project directory, you can run:
 
-<center><h2>Установка необходимых пакетов.</h2></center>
+### `npm start`
 
-```
-npm i
-```
-Команда установит все необходимые пакеты для запуска решения.
-<center><h2>Запуск проекта как React-приложение.</h2></center>
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-```
-npm run start
-```
-Команда запустит решение как отдельное React-приложение.
-<br/>
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-<center><h2>Сборка проекта в отдельный виджет</h2></center>
+### `npm test`
 
-```
-npm run dev
-```
-После окончания команды в папку docs появится финальный собранный скрипт. Для подключения
-его к html-документу достаточно вставить следующую строчку
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-<br/>
+### `npm run build`
 
-```
-<script src="index.js"></script>
-```
-После этого в любом месте текстового документа вставляется **div** с нужным **id**. Все остальное будет
-подключено автоматически
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-<br/>
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-<center><h2>Техническое задание</h2></center>
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-* [Ссылка на техническое задание](https://github.com/optimaxdev/volga-it-2022)
+### `npm run eject`
 
-* [Ссылка на задание отборочного этапа](https://volga-it.org/wp-content/plugins/wp-olymp/files/57ce42844e6c5878f3b325e92ac86188.pdf)
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-* [Ссылка на описание каждого экрана](https://github.com/optimaxdev/volga-it-2022)
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Learn More
 
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+To learn React, check out the [React documentation](https://reactjs.org/).
 
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

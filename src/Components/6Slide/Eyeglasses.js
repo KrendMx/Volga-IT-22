@@ -5,7 +5,7 @@ import { ContainerChoose, TextUnderImage } from "../../Styles";
 
 const Eyeglasses = observer(() => {
   return (
-    <ContainerChoose>
+    <ContainerChoose style={{justifyContent:"flex-start"}}>
       <h2 style={{ width: "80%", fontSize: "20px" }}>
         Would you like to protect your eyes from light emanating from screens?
       </h2>

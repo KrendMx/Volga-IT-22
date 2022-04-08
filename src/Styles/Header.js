@@ -2,6 +2,7 @@ import styled from "styled-components";
 const Headers = styled.div`
   width: 100%;
   padding: 4% 0;
+  height: 10%;
   margin: 0 auto;
   background: white;
   font-family: "Open Sans", sans-serif;
