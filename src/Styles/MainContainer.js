@@ -1,9 +1,11 @@
 import styled from "styled-components"
 const AppContainer = styled.div`
-  width: 25rem;
+  width:100vw;
+  max-width: 30rem;
   position: relative;
   margin: 0;
-  height: 45em;
+  height: 100vh;
+  max-height: 50rem;
   overflow: hidden;
   
   @at-root {
