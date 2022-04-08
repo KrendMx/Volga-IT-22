@@ -9,7 +9,6 @@
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
-    "jest": "^27.5.1",
     "mobx": "^6.5.0",
     "mobx-react-lite": "^3.3.0",
     "parcel-bundler": "^1.12.5",
@@ -24,14 +23,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "developBuild":"react-scripts build",
-    "build": "parcel build src/index.js --no-source-maps -d docs",
-    "test": "jest"
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.jsx?$": "babel-jest"
-    }
+    "devbuild":"react-scripts build",
+    "build": "parcel build src/index.js --no-source-maps -d docs"
   },
   "eslintConfig": {
     "extends": [
@@ -50,8 +43,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/preset-env": "^7.16.11"
   }
 }
