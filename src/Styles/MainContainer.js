@@ -1,12 +1,7 @@
 import styled from "styled-components"
 const AppContainer = styled.div`
-  width:100vw;
-  max-width: 30rem;
-  position: relative;
-  margin: 0;
-  height: 100vh;
-  max-height: 50rem;
-  overflow: hidden;
+  width:100%;
+  height: 100%;
   
   @at-root {
     @font-face {
@@ -29,7 +24,7 @@ const AppContainer = styled.div`
     overflow: hidden;
     list-style: none;
     padding: 0;
-    /* Fix of Webkit flickering */
+    height: 100%;
     z-index: 1;
   }
   .swiper-vertical > .swiper-wrapper {

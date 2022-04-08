@@ -20,7 +20,7 @@ const Container = ({ title, imageSrc, visTitle }) => {
     >
       {vis ? (
         <span
-          style={{ position: "absolute", top: "-0.5rem", right: "-0.5rem" }}
+          style={{ position: "absolute", top: "-4%", right: "-3%" }}
         >
           <svg
             width="20"
@@ -40,9 +40,9 @@ const Container = ({ title, imageSrc, visTitle }) => {
           </svg>
         </span>
       ) : null}
-      <span>
+      <div>
         <img style={{paddingTop:!visTitle ? "35px" : "auto"}} src={imageSrc} alt={"Форма оправы"} />
-      </span>
+      </div>
       {visTitle ? <p>{title}</p> : <p>{null}</p>}
     </span>
   );

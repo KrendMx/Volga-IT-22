@@ -125,7 +125,7 @@ const Header = observer(() => {
       ) : Information.initialSlide > 100 ? (
         <div
           style={{
-            minWidth: "700px",
+            minWidth: "100%",
             minHeight: "0.5vh",
             backgroundImage: "linear-gradient(to right, #3797FA, #45C9FF)",
           }}

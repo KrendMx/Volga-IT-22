@@ -11,22 +11,24 @@ const FourthSLide = observer(() => {
       {!isAgree ? (
         <ContainerChoose>
           <h2>Do you need vision correction?</h2>
-          <TextUnderImage
-            style={{ padding: "3em" }}
-            onClick={() => {
-              setIsAgree(true);
-            }}
-          >
-            <p>Yes</p>
-          </TextUnderImage>
-          <TextUnderImage
-            onClick={() => {
-              Store.toNextSlide();
-            }}
-            style={{ padding: "3em" }}
-          >
-            <p>No</p>
-          </TextUnderImage>
+          <span>
+            <TextUnderImage
+              style={{ padding: "3em" }}
+              onClick={() => {
+                setIsAgree(true);
+              }}
+            >
+              <p>Yes</p>
+            </TextUnderImage>
+            <TextUnderImage
+              onClick={() => {
+                Store.toNextSlide();
+              }}
+              style={{ padding: "3em" }}
+            >
+              <p>No</p>
+            </TextUnderImage>
+          </span>
           <h3
             onClick={() => {
               Store.toNextSlide();
@@ -38,39 +40,41 @@ const FourthSLide = observer(() => {
       ) : (
         <ContainerChoose>
           <h2>What do you need your glasses for?</h2>
-          <TextUnderImage
-            onClick={() => {
-              Store.changeLabel("lenstype", "6");
-              Store.toNextSlide();
-              setTimeout(() => {
-                setIsAgree(false);
-              }, 200);
-            }}
-          >
-            <p>Near Vision</p>
-          </TextUnderImage>
-          <TextUnderImage
-            onClick={() => {
-              Store.changeLabel("lenstype", "6");
-              Store.toNextSlide();
-              setTimeout(() => {
-                setIsAgree(false);
-              }, 200);
-            }}
-          >
-            <p>Distance Vision</p>
-          </TextUnderImage>
-          <TextUnderImage
-            onClick={() => {
-              Store.changeLabel("lenstype", "7");
-              Store.toNextSlide();
-              setTimeout(() => {
-                setIsAgree(false);
-              }, 200);
-            }}
-          >
-            <p>Multifocal / Progressive</p>
-          </TextUnderImage>
+          <span>
+            <TextUnderImage
+              onClick={() => {
+                Store.changeLabel("lenstype", "6");
+                Store.toNextSlide();
+                setTimeout(() => {
+                  setIsAgree(false);
+                }, 200);
+              }}
+            >
+              <p>Near Vision</p>
+            </TextUnderImage>
+            <TextUnderImage
+              onClick={() => {
+                Store.changeLabel("lenstype", "6");
+                Store.toNextSlide();
+                setTimeout(() => {
+                  setIsAgree(false);
+                }, 200);
+              }}
+            >
+              <p>Distance Vision</p>
+            </TextUnderImage>
+            <TextUnderImage
+              onClick={() => {
+                Store.changeLabel("lenstype", "7");
+                Store.toNextSlide();
+                setTimeout(() => {
+                  setIsAgree(false);
+                }, 200);
+              }}
+            >
+              <p>Multifocal / Progressive</p>
+            </TextUnderImage>
+          </span>
           <h3
             onClick={() => {
               Store.toNextSlide();

@@ -5,11 +5,11 @@ import { ContainerMain } from "../../Styles/Containers";
 
 const TwelveSlide = observer(() => {
   return (
-    <ContainerMain>
+    <ContainerMain style={{justifyContent:"flex-start"}}>
       <span>
         <svg
-          width="213"
-          height="213"
+          width="182"
+          height="182"
           viewBox="0 0 182 182"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -101,20 +101,23 @@ const TwelveSlide = observer(() => {
           </defs>
         </svg>
       </span>
-      <h1 style={{ fontSize: "20px", width: "80%", margin: "auto" }}>
-        We've found some awesome frames for you!
-      </h1>
-      <h2 style={{ fontSize: "16px" }}>
-        Send the results to your email to receive special discounts.
-      </h2>
+      <span>
+        <h1 style={{ fontSize: "20px", width: "80%", margin: "0 auto" }}>
+          We've found some awesome frames for you!
+        </h1>
+        <h2 style={{ fontSize: "16px",margin:"1% auto" }}>
+          Send the results to your email to receive special discounts.
+        </h2>
+      </span>
       <button
+      style={{marginTop:"14%", marginBottom:"0",textSize:"28px" }}
         onClick={() => {
           console.log(Information.generateLink());
         }}
       >
         Send
       </button>
-      <p style={{ margin: "10vh auto 0", fontSize: "14.06px", width: "80%" }}>
+      <p style={{ margin: "auto", fontSize: "14.06px", width: "80%" }}>
         By clicking ‘Send’ you agree to our Terms of Use & Privacy Policy and
         receiving promotion emails
       </p>

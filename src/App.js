@@ -37,7 +37,7 @@ const App = observer(({ url }) => {
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
-        initialSlide={0}
+        initialSlide={14}
         allowTouchMove={false}
       >
         <SwiperSlide>

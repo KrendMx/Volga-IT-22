@@ -7,16 +7,18 @@ const ContainerChoose = styled.div`
   position: relative;
   background: linear-gradient(180deg, #e8f0f2 0%, #e8f0f2 100%);
   text-align: center;
-  padding: 1rem 0px 110%;
+  justify-content: space-around;
+  align-content: ${(props) => (props.evenly ? "space-between" : "center")};
   display: flex;
   flex-direction: column;
-
+  & span {
+    margin-bottom: 20%;
+  }
   div:nth-of-type(n) {
     &:hover {
       background-color: #eaeaea;
     }
   }
-
   & button {
     background: linear-gradient(270deg, #45c7fa 0%, #2196f3 100%);
     box-shadow: 4px 1px rgba(0, 0, 0, 0.03);
@@ -62,13 +64,13 @@ const ContainerChoose = styled.div`
   & h2 {
     width: 60%;
     font-size: 20px;
-    margin: 0.4rem auto;
+    margin: 0 auto;
+    margin-top: 5%;
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
   }
 
   & h3 {
-    align-content: end;
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
     font-size: 16px;
@@ -80,11 +82,13 @@ const ContainerChoose = styled.div`
 
 const ContainerMain = styled.div`
   width: 100%;
+  height: 100%;
   margin: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  display: flex;
   background: linear-gradient(180deg, #e8f0f2 0%, #e8f0f2 100%);
   text-align: center;
-  padding-bottom: 110%;
-
   & p {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
@@ -92,6 +96,7 @@ const ContainerMain = styled.div`
 
   & button {
     background: linear-gradient(270deg, #45c7fa 0%, #2196f3 100%);
+    margin: 0 auto;
     box-shadow: 4px 1px rgba(0, 0, 0, 0.03);
     border-radius: 24px;
     font-family: "Roboto", sans-serif;
@@ -132,13 +137,14 @@ const ContainerMain = styled.div`
 
   & img {
     width: 80%;
-    padding-top: 4vw;
+    margin: 0 auto;
   }
 `;
 
 const ContainerManyCheck = styled.span`
+  margin-top: 3%;
   display: grid;
-  grid-template-rows: repeat(3, 30%);
+  grid-template-rows: repeat(3, 33%);
   grid-template-columns: repeat(4, 47%);
   overflow-x: scroll;
 
@@ -161,13 +167,19 @@ const ContainerManyCheck = styled.span`
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: start;
     transition: all 0.01s;
     border: 2px solid #ffffff00;
-
+    & div {
+      &:hover {
+        background-color: white;
+        border-radius: 1rem;
+      }
+    }
     & p {
       font-family: "Open Sans", sans-serif;
       font-size: 15px;
+      margin: 0 auto;
       color: #425a60;
     }
     &.active {

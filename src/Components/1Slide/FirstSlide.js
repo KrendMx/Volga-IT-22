@@ -25,7 +25,7 @@ const FirstSlide = observer(() => {
 
   return (
     <ContainerMain>
-      <img src={mainImage}  alt={"mainImage"}/>
+      <img src={mainImage}  alt={"mainImage"} style={{marginTop:"15%"}}/>
       <h1>Let's find your perfect pair!</h1>
       <h2>
         Take the quiz to easily discover your perfect fit from thousands of

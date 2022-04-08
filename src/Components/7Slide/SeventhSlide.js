@@ -16,61 +16,71 @@ const SeventhSlide = observer(() => {
   return (
     <ContainerChoose>
       <h2>Every face shape has a perfect fit. What’s yours?</h2>
-      <TextImageAndLineBetween
-        onClick={() => {
-          Information.changeLabel("face_shape", "long");
-          Information.toNextSlide();
-        }}
-      >
-        {Information.userInfo.gender === "4" ? <img src={menLonger} alt={'Лицо вытянутой формы'}/> : null}
-        {Information.userInfo.gender === "5" ? <img src={womanLonger} alt={'Лицо вытянутой формы'}/> : null}
-        {!Information.userInfo.gender ? (
-          <img style={{ width: "30%" }} src={nebinLonger} alt={'Лицо вытянутой формы'}/>
-        ) : null}
-        <p>I have a long face</p>
-      </TextImageAndLineBetween>
-      <TextImageAndLineBetween
-        onClick={() => {
-          Information.changeLabel("face_shape", "round");
-          Information.toNextSlide();
-        }}
-      >
-        {Information.userInfo.gender === "4" ? (
-          <img src={menRound} alt={"круглая форма лица"} />
-        ) : null}
-        {Information.userInfo.gender === "5" ? (
-          <img src={womanRound} alt={"круглая форма лица"} />
-        ) : null}
-        {!Information.userInfo.gender ? (
-          <img
-            style={{ width: "30%" }}
-            src={nebinRound}
-            alt={"круглая форма лица"}
-          />
-        ) : null}
-        <p>I have a round face</p>
-      </TextImageAndLineBetween>
-      <TextImageAndLineBetween
-        onClick={() => {
-          Information.changeLabel("face_shape", "between");
-          Information.toNextSlide();
-        }}
-      >
-        {Information.userInfo.gender === "4" ? (
-          <img src={menMixed} alt={"лицо смешанной формы"} />
-        ) : null}
-        {Information.userInfo.gender === "5" ? (
-          <img src={womanMixed} alt={"лицо смешанной формы"} />
-        ) : null}
-        {!Information.userInfo.gender ? (
-          <img
-            style={{ width: "30%" }}
-            src={nebinMixed}
-            alt={"лицо смешанной формы"}
-          />
-        ) : null}
-        <p>In between</p>
-      </TextImageAndLineBetween>
+      <span>
+        <TextImageAndLineBetween
+          onClick={() => {
+            Information.changeLabel("face_shape", "long");
+            Information.toNextSlide();
+          }}
+        >
+          {Information.userInfo.gender === "4" ? (
+            <img src={menLonger} alt={"Лицо вытянутой формы"} />
+          ) : null}
+          {Information.userInfo.gender === "5" ? (
+            <img src={womanLonger} alt={"Лицо вытянутой формы"} />
+          ) : null}
+          {!Information.userInfo.gender ? (
+            <img
+              style={{ width: "30%" }}
+              src={nebinLonger}
+              alt={"Лицо вытянутой формы"}
+            />
+          ) : null}
+          <p>I have a long face</p>
+        </TextImageAndLineBetween>
+        <TextImageAndLineBetween
+          onClick={() => {
+            Information.changeLabel("face_shape", "round");
+            Information.toNextSlide();
+          }}
+        >
+          {Information.userInfo.gender === "4" ? (
+            <img src={menRound} alt={"круглая форма лица"} />
+          ) : null}
+          {Information.userInfo.gender === "5" ? (
+            <img src={womanRound} alt={"круглая форма лица"} />
+          ) : null}
+          {!Information.userInfo.gender ? (
+            <img
+              style={{ width: "30%" }}
+              src={nebinRound}
+              alt={"круглая форма лица"}
+            />
+          ) : null}
+          <p>I have a round face</p>
+        </TextImageAndLineBetween>
+        <TextImageAndLineBetween
+          onClick={() => {
+            Information.changeLabel("face_shape", "between");
+            Information.toNextSlide();
+          }}
+        >
+          {Information.userInfo.gender === "4" ? (
+            <img src={menMixed} alt={"лицо смешанной формы"} />
+          ) : null}
+          {Information.userInfo.gender === "5" ? (
+            <img src={womanMixed} alt={"лицо смешанной формы"} />
+          ) : null}
+          {!Information.userInfo.gender ? (
+            <img
+              style={{ width: "30%" }}
+              src={nebinMixed}
+              alt={"лицо смешанной формы"}
+            />
+          ) : null}
+          <p>In between</p>
+        </TextImageAndLineBetween>
+      </span>
       <h3
         onClick={() => {
           Information.toNextSlide();

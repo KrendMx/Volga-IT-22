@@ -5,11 +5,11 @@ import { ContainerChoose, TextUnderImage } from "../../Styles";
 
 const Eyeglasses = observer(() => {
   return (
-    <div>
-      <ContainerChoose>
-        <h2 style={{ width: "80%", fontSize: "20px" }}>
-          Would you like to protect your eyes from light emanating from screens?
-        </h2>
+    <ContainerChoose>
+      <h2 style={{ width: "80%", fontSize: "20px" }}>
+        Would you like to protect your eyes from light emanating from screens?
+      </h2>
+      <span>
         <TextUnderImage
           style={{ padding: "3em" }}
           onClick={() => {
@@ -28,8 +28,8 @@ const Eyeglasses = observer(() => {
         >
           <p>No</p>
         </TextUnderImage>
-      </ContainerChoose>
-    </div>
+      </span>
+    </ContainerChoose>
   );
 });
 export default Eyeglasses;

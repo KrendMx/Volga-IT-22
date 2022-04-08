@@ -7,10 +7,11 @@ import Information from "../../Store/Store";
 const ChoosingSlide = observer(({ ctx, data, visTitle }) => {
   const [dis, setDis] = useState(false);
   return (
-    <ContainerChoose>
+    <ContainerChoose evenly={true}>
       <h2 style={{ width: "90%" }}>Which frame style are you looking for?</h2>
       <p className={"h4"}>You can pick more than one.</p>
       <ContainerManyCheck
+      style={{margin:"0",marginBottom:"4%"}}
         id={ctx}
         onClick={() => {
           setDis(
@@ -28,6 +29,7 @@ const ChoosingSlide = observer(({ ctx, data, visTitle }) => {
       </ContainerManyCheck>
       <button
         disabled={!dis}
+        style={{marginBottom:"15%"}}
         onClick={() => {
           let userChoose = Array.from(
             document.getElementById(ctx).children
