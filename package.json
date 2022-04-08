@@ -24,6 +24,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "developBuild":"react-scripts build",
     "build": "parcel build src/index.js --no-source-maps -d docs",
     "test": "jest"
   },
