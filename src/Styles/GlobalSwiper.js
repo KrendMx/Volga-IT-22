@@ -15,16 +15,6 @@ const GlobalStyle = createGlobalStyle`
     --swiper-theme-color: #{$themeColor};
   }
 }
-.swiper {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  overflow: hidden;
-  list-style: none;
-  padding: 0;
-  z-index: 1;
-  height: 90%;
-}
 .swiper-vertical > .swiper-wrapper {
   flex-direction: column;
   height: 100%;

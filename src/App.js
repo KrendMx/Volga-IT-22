@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 import Information from "./Store/Store";
 import { observer } from "mobx-react-lite";
 import FourthSlide from "./Components/4Slide/FourthSlide";
@@ -37,6 +37,16 @@ const App = observer(({ url }) => {
         />
         <Header slideNuber={Information.initialSlide} />
         <Swiper
+          style={{
+            marginLeft: "auto",
+            marginRight: "auto",
+            position: "relative",
+            overflow: "hidden",
+            listStyle: "none",
+            padding: "0",
+            zIndex: "1",
+            height: "90%",
+          }}
           spaceBetween={0}
           slidesPerView={1}
           initialSlide={0}
