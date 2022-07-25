@@ -55,4 +55,3 @@ npm run widget
 - [Ссылка на описание каждого экрана](https://github.com/optimaxdev/volga-it-2022)
 
 - [Ccылка на сайт с собранным мобильным виджетом](https://volga-it-22.vercel.app/)
-- 
